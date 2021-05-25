@@ -44,7 +44,7 @@
           <h6 class="text-uppercase fw-bold mb-4">
             <i class="fas fa-gem me-3"></i>SUVIS INDONESIA
           </h6>
-          <p>
+          <p class="text-justify">
             Here you can use rows and columns to organize your footer content. Lorem ipsum
             dolor sit amet, consectetur adipisicing elit.
           </p>
@@ -79,13 +79,13 @@
             Useful links
           </h6>
           <p>
-            <a href="#!" class="text-reset">Pricing</a>
+            <a href="#!" class="text-reset">Cara Memesan</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Settings</a>
+            <a href="#!" class="text-reset">Tentang Suvis</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Orders</a>
+            <a href="#!" class="text-reset"></a>
           </p>
           <p>
             <a href="#!" class="text-reset">Help</a>

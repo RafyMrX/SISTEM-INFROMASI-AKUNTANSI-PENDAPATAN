@@ -7,13 +7,16 @@
 <!-- PRODUK/LAYANAN -->
 <div class="container">
  <div class="card-deck">
+
   <div class="card">
+ <a href="{{url('/pemesanan')}}" >
     <img class="card-img-top" src="{{url('assets/produk/1.jpg')}}" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Service AC</h5>
       <p class="card-text"></p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
+</a>
   </div>
 
   <div class="card">
