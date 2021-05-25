@@ -45,8 +45,8 @@
 				</table>
 			</div>
 		</div>
-
-		<p style="font-size: 13pt" class="font-weight-bold text-center">Data Pemesanan</p>
+		<br>
+		<p style="font-size: 13pt; border-bottom: 1px solid gray" class="font-weight-bold text-center">Data Pemesanan</p>
 
 		<div class="row">
 			<div class="col-md-8">
