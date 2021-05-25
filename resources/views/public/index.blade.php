@@ -12,9 +12,8 @@
  <a href="{{url('/pemesanan')}}" >
     <img class="card-img-top" src="{{url('assets/produk/1.jpg')}}" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">Service AC</h5>
+      <h5 class="card-title text-center">Service AC</h5>
       <p class="card-text"></p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
 </a>
   </div>
@@ -22,36 +21,32 @@
   <div class="card">
     <img class="card-img-top" src="{{url('assets/produk/1.jpg')}}" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">Service AC</h5>
+        <h5 class="card-title text-center">Service Mesin Cuci</h5>
       <p class="card-text"></p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
     </div>
   </div>
 
   <div class="card">
     <img class="card-img-top" src="{{url('assets/produk/1.jpg')}}" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">Service AC</h5>
+        <h5 class="card-title text-center">Service Kulkas</h5>
       <p class="card-text"></p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
 
   <div class="card">
     <img class="card-img-top" src="{{url('assets/produk/1.jpg')}}" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">Service AC</h5>
+      <h5 class="card-title text-center">Service TV</h5>
       <p class="card-text"></p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
 
   <div class="card">
     <img class="card-img-top" src="{{url('assets/produk/1.jpg')}}" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">Service AC</h5>
-      <p class="card-text"></p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <h5 class="card-title text-center">Service Pompa Air</h5>
     </div>
   </div>
 
@@ -60,20 +55,21 @@
 
 <br>
 <br>
-<div class="d-flex justify-content-center" style="background-color: gray">	
-<div class="container ">
-	<div class="row">
-		<div class="col-md-4">
-			<img src="">
-			<p>Pilih Layanan Suvis</p>
+<div class="" style="background-color: #efefef; padding: 30px;">	
+<div class="container justify-content-center">
+	<h4 class="text-center mb-5">Cara Memesan Layanan Suvis Indonesia</h4>
+	<div class="row text-center">
+		<div class="col-md-4 ">
+			<img src="{{url('assets/icon/1.png')}}" width="90">
+			<h5>Pilih Layanan Suvis</h5>
 		</div>
 		<div class="col-md-4">
-			<img src="">
-			<p>Pilih Penyedia Jasa</p>
+			<img src="{{url('assets/icon/2.png')}}" width="90">
+			<h5>Pilih Penyedia Jasa</h5>
 		</div>
 		<div class="col-md-4">
-			<img src="">
-			<p>Tunggu Teknisi Datang</p>
+			<img src="{{url('assets/icon/3.png')}}" width="90">
+			<h5>Tunggu Teknisi Datang</h5>
 		</div>
 	</div>
 </div>
