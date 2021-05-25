@@ -1,3 +1,7 @@
+body{
+	font-family: 'Baloo 2';
+}
+
 .kotak{
 	border:1px solid #bababa;
 	padding: 10px;

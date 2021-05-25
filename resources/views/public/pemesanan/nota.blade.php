@@ -6,7 +6,7 @@
 <div class="container">
 	<div class="card-deck">
 		<div class="card kotak" style="padding: 20px;">
-			<h4 style="border-bottom: 1px solid #bababa;padding-bottom: 4px;">Suvis Indonesia</h4>
+			<h3 style="border-bottom: 1px solid #bababa;padding-bottom: 4px; color: orange;" class="text-uppercase">Suvis Indonesia</h3>
 		<div class="row">
 			<div class="col-md-6">
 				<p style="font-size: 13pt" class="font-weight-bold">Pemesanan</p>

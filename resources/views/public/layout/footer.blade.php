@@ -45,8 +45,7 @@
             <i class="fas fa-gem me-3"></i>SUVIS INDONESIA
           </h6>
           <p class="text-justify">
-            Here you can use rows and columns to organize your footer content. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit.
+            Suvis Indonesia adalah sebuah Startup berbasis Website yang bertujuan untuk melayani layanan home service perbaikan perabot elektronik rumah tangga. Suvis Indonesia menghubungkan antara konsumen dan penyedia jasa di berbagai lokasi dengan berbagai macam layanan yang tersedia. 
           </p>
         </div>
         <!-- Grid column -->
@@ -99,13 +98,13 @@
           <h6 class="text-uppercase fw-bold mb-4">
             Kontak
           </h6>
-          <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+          <p><i class="fas fa-home me-3"></i>Jl.Tanah Merah Indah 1</p>
           <p>
             <i class="fas fa-envelope me-3"></i>
-            info@example.com
+            suvis.id@gmail.com
           </p>
-          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+          <p><i class="fas fa-phone me-3"></i> 07635466352</p>
+          <p><i class="fas fa-print me-3"></i> + 01 234 67</p>
         </div>
         <!-- Grid column -->
       </div>
