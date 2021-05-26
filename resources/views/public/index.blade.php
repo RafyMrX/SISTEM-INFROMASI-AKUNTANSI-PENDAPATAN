@@ -19,7 +19,7 @@
   </div>
 
   <div class="card">
-    <img class="card-img-top" src="{{url('assets/produk/1.jpg')}}" alt="Card image cap">
+    <img class="card-img-top" src="{{url('assets/produk/cuci.png')}}" alt="Card image cap">
     <div class="card-body">
         <h5 class="card-title text-center">Service Mesin Cuci</h5>
       <p class="card-text"></p>
@@ -28,7 +28,7 @@
   </div>
 
   <div class="card">
-    <img class="card-img-top" src="{{url('assets/produk/1.jpg')}}" alt="Card image cap">
+    <img class="card-img-top" src="{{url('assets/produk/klk.png')}}" alt="Card image cap">
     <div class="card-body">
         <h5 class="card-title text-center">Service Kulkas</h5>
       <p class="card-text"></p>
@@ -36,7 +36,7 @@
   </div>
 
   <div class="card">
-    <img class="card-img-top" src="{{url('assets/produk/1.jpg')}}" alt="Card image cap">
+    <img class="card-img-top" src="{{url('assets/produk/tv.png')}}" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title text-center">Service TV</h5>
       <p class="card-text"></p>
@@ -44,7 +44,7 @@
   </div>
 
   <div class="card">
-    <img class="card-img-top" src="{{url('assets/produk/1.jpg')}}" alt="Card image cap">
+    <img class="card-img-top" src="{{url('assets/produk/pum.png')}}" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title text-center">Service Pompa Air</h5>
     </div>
