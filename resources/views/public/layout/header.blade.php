@@ -48,8 +48,8 @@
           Akun
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Login</a>
-          <a class="dropdown-item" href="#">Daftar</a>
+          <a class="dropdown-item" href="{{url('/login')}}">Login</a>
+          <a class="dropdown-item" href="{{url('/daftar')}}">Daftar</a>
       </li>
     </ul>
   </div>

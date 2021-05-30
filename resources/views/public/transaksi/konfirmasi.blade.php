@@ -88,7 +88,7 @@
 		</div>
 		<div class="col-md-6">
 			<br>
-			<input type="submit" class="btn btn-success btn-block" name="" value="Kirim">
+			<input type="submit" class="btn btn-success btn-block" name="" value="Kirim" style="margin-top: 11px;">
 		</div>
 	</div>
 </form>
