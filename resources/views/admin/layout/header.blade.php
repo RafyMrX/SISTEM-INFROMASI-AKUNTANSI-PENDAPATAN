@@ -9,23 +9,23 @@
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{url('assets/admin/plugins/fontawesome-free/css/all.min.css}}">
+    <link rel="stylesheet" href="{{url('assets/admin/plugins/fontawesome-free/css/all.min.css')}}">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Tempusdominus Bootstrap 4 -->
-    <link rel="stylesheet" href="{{url('assets/admin/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css}}">
+    <link rel="stylesheet" href="{{url('assets/admin/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
     <!-- iCheck -->
-    <link rel="stylesheet" href="{{url('assets/admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css}}">
+    <link rel="stylesheet" href="{{url('assets/admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
     <!-- JQVMap -->
-    <link rel="stylesheet" href="{{url('assets/admin/plugins/jqvmap/jqvmap.min.css}}">
+    <link rel="stylesheet" href="{{url('assets/admin/plugins/jqvmap/jqvmap.min.css')}}">
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{url('assets/admin/dist/css/adminlte.min.css}}">
+    <link rel="stylesheet" href="{{url('assets/admin/dist/css/adminlte.min.css')}}">
     <!-- overlayScrollbars -->
-    <link rel="stylesheet" href="{{url('assets/admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css}}">
+    <link rel="stylesheet" href="{{url('assets/admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
     <!-- Daterange picker -->
-    <link rel="stylesheet" href="{{url('assets/admin/plugins/daterangepicker/daterangepicker.css}}">
+    <link rel="stylesheet" href="{{url('assets/admin/plugins/daterangepicker/daterangepicker.css')}}">
     <!-- summernote -->
-    <link rel="stylesheet" href="{{url('assets/admin/plugins/summernote/summernote-bs4.min.css}}">
+    <link rel="stylesheet" href="{{url('assets/admin/plugins/summernote/summernote-bs4.min.css')}}">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -39,7 +39,7 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="index3.html" class="nav-link">Home</a>
+                    <a href="{{url('/home')}}" class="nav-link">Home</a>
                 </li>
             </ul>
 
@@ -81,7 +81,7 @@
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="{{url('assets/admin/dist/img/user2-160x160.jpg}}" class="img-circle elevation-2" alt="User Image">
+                        <img src="{{url('assets/admin/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
                         <a href="#" class="d-block">Alexander Pierce</a>
@@ -94,7 +94,7 @@
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{url('/home')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>
                                     Home
@@ -103,7 +103,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="layanan.html" class="nav-link">
+                            <a href="{{url('/layanan')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>
                                     Layanan
@@ -112,7 +112,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{url('/konsumen')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>
                                     Konsumen
@@ -121,7 +121,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{url('/pemesanan')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>
                                     Pemesanan
@@ -130,7 +130,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="transaksi.html" class="nav-link">
+                            <a href="{{url('/transaksi')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>
                                     Transaksi
