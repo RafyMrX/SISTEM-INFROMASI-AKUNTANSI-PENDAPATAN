@@ -13,7 +13,7 @@ class AdmKonsumenController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.konsumen.index');
     }
 
     /**
