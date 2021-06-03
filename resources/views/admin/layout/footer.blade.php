@@ -1,8 +1,8 @@
 <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2020 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+    <strong>Copyright &copy; 2021 - 2020 <a href="#">Suvis Indonesia</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
-        <b>Version</b> 3.1.0-rc
+        <b>Version</b> 3.1.0
     </div>
 </footer>
 
@@ -28,6 +28,11 @@
 <script src="{{url('assets/admin/plugins/chart.js/Chart.min.js')}}"></script>
 <!-- Sparkline -->
 <script src="{{url('assets/admin/plugins/sparklines/sparkline.js')}}"></script>
+<!-- DataTables -->
+<script src="{{url('assets/admin/plugins/datatables/jquery.dataTables.min.js')}}"></script>
+<script src="{{url('assets/admin/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
+<script src="{{url('assets/admin/plugins/datatables-responsive/js/dataTables.responsive.min.js')}}"></script>
+<script src="{{url('assets/admin/plugins/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
 <!-- JQVMap -->
 <script src="{{url('assets/admin/plugins/jqvmap/jquery.vmap.min.js')}}"></script>
 <script src="{{url('assets/admin/plugins/jqvmap/maps/jquery.vmap.usa.js')}}"></script>
@@ -48,6 +53,24 @@
 <script src="{{url('assets/admin/dist/js/demo.js')}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{url('assets/admin/dist/js/pages/dashboard.js')}}"></script>
+<script>
+    $(function() {
+        $("#example1").DataTable({
+            "responsive": true,
+            "autoWidth": false,
+        });
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+        });
+    });
+</script>
+
 </body>
 
 </html>
