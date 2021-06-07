@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pemesanan;
 use Illuminate\Http\Request;
 
 class AdmPemesananController extends Controller
@@ -13,7 +14,11 @@ class AdmPemesananController extends Controller
      */
     public function index()
     {
-        return view('admin.pemesanan.index');
+        //DB Pemesanan
+        $pemesanan = Pemesanan::All();
+        $count = Pemesanan::All()->count();
+
+        return view('admin.pemesanan.index', compact('pemesanan', 'count'));
     }
 
     /**

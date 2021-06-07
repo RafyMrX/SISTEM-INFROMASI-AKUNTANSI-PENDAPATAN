@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Transaksi extends Model
 {
-    use HasFactory;
+    protected $table = "pemesanan";
+    protected $guarded = ['created_at', "updated_at"];
 }
