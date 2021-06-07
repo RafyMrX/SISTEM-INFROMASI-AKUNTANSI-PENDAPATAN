@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Transaksi;
 use Illuminate\Http\Request;
 
 class AdmTransaksiController extends Controller
@@ -13,7 +14,11 @@ class AdmTransaksiController extends Controller
      */
     public function index()
     {
-        return view('admin.transaksi.index');
+        //DB Transaksi
+        $transaksi = Transaksi::All();
+        $count = Transaksi::All()->count();
+
+        return view('admin.transaksi.index', compact('transaksi', 'count'));
     }
 
     /**

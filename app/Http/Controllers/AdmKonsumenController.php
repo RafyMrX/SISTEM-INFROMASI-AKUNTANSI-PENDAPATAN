@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Konsumen;
 use Illuminate\Http\Request;
 
 class AdmKonsumenController extends Controller
@@ -13,7 +14,10 @@ class AdmKonsumenController extends Controller
      */
     public function index()
     {
-        return view('admin.konsumen.index');
+        //DB Konsumen
+        $konsumen = Konsumen::All();
+        $count = Konsumen::All()->count();
+        return view('admin.konsumen.index', compact('konsumen', 'count'));
     }
 
     /**

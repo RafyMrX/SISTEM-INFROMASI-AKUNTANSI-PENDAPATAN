@@ -45,6 +45,14 @@ Route::get('/home', [AdmHomeController::class, 'index']);
 
 // Layanan
 Route::get('/layanan', [AdmLayananController::class, 'index']);
+Route::get('/layanan/tambah', [AdmLayananController::class, 'create']);
+Route::post('/layanan/tambah', [AdmLayananController::class, 'store']);
+Route::get('/layanan/{id}', [AdmLayananController::class, 'edit']);
+Route::get('/delete/{id}', [AdmLayananController::class, 'destroy']);
+Route::get('/layanan/edit', [AdmLayananController::class, 'edit']);
+Route::post('/layanan/{id}', [AdmLayananController::class, 'update']);
+
+
 
 // Konsumen
 Route::get('/konsumen', [AdmKonsumenController::class, 'index']);
