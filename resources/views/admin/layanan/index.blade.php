@@ -1,5 +1,5 @@
 @extends('admin.layout.main')
-@section('judul', 'Konsumen')
+@section('judul', 'Layanan')
 @section('content')
 
 <!-- Content Wrapper. Contains page content -->

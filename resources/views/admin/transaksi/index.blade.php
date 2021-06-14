@@ -9,12 +9,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Laporan Transaksi</h1>
+                    <h1 class="m-0">Data Transaksi</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="{{url('/home')}}">Home</a></li>
-                        <li class="breadcrumb-item active">Laporan Transaksi</li>
+                        <li class="breadcrumb-item active">Data Transaksi</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -44,20 +44,20 @@
                     <table id="example1" class="table table-bordered table-striped">
                         <thead>
                             <tr>
-                                <th>Rendering engine</th>
-                                <th>Browser</th>
-                                <th>Platform(s)</th>
-                                <th>Engine version</th>
+                                <th>No</th>
+                                <th>ID Konsumen</th>
+                                <th>Nama Konsumen</th>
+                                <th>Telp Konsumen</th>
                                 <th>Edit</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Tasman</td>
-                                <td>Internet Explorer 5.1</td>
-                                <td>Mac OS 7.6-9</td>
                                 <td>1</td>
-                                <td>C</td>
+                                <td>K0001</td>
+                                <td>Aldi</td>
+                                <td>085737737738</td>
+                                <td><a href="" class="btn btn-primary"><i class="fas fa-pencil-alt"></i>Detail</a></td>
                             </tr>
                         </tbody>
                     </table>
