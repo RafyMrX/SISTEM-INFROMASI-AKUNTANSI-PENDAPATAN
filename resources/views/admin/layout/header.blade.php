@@ -125,7 +125,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('/pemesanan')}}" class="nav-link">
+                            <a href="{{url('/admpemesanan')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>
                                     Pemesanan
@@ -134,7 +134,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('/transaksi')}}" class="nav-link">
+                            <a href="{{url('/admtransaksi')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>
                                     Transaksi

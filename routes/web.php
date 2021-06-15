@@ -71,7 +71,7 @@ Route::get('/anggota/{id}', [AdmAnggotaController::class, 'update']);
 Route::get('/konsumen', [AdmKonsumenController::class, 'index']);
 
 // Pemesanan
-Route::get('/pemesanan', [AdmPemesananController::class, 'index']);
+Route::get('/admpemesanan', [AdmPemesananController::class, 'index']);
 
 //Transaksi
-Route::get('/transaksi', [AdmTransaksiController::class, 'index']);
+Route::get('/admtransaksi', [AdmTransaksiController::class, 'index']);

@@ -1,14 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Layanan;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
     public function index()
     {
-        return view('public.index');
+        $layanan = Layanan::all();
+        return view('public.index', compact('layanan'));
     }
     public function nota()
     {

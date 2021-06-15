@@ -7,74 +7,41 @@
 <!-- PRODUK/LAYANAN -->
 <div class="container">
  <div class="card-deck">
-
+  @foreach($layanan as $item)
   <div class="card">
- <a href="{{url('/pemesanan')}}" >
-    <img class="card-img-top" src="{{url('assets/produk/1.jpg')}}" alt="Card image cap">
+   <a href="{{url('/pemesanan')}}" >
+    <img class="card-img-top" src="{{ asset('storage/'.$item->foto_layanan.'')}}" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title text-center">Service AC</h5>
+      <h5 class="card-title text-center">{{$item->nama_layanan}}</h5>
       <p class="card-text"></p>
     </div>
-</a>
-  </div>
-
-  <div class="card">
-    <img class="card-img-top" src="{{url('assets/produk/cuci.png')}}" alt="Card image cap">
-    <div class="card-body">
-        <h5 class="card-title text-center">Service Mesin Cuci</h5>
-      <p class="card-text"></p>
-
-    </div>
-  </div>
-
-  <div class="card">
-    <img class="card-img-top" src="{{url('assets/produk/klk.png')}}" alt="Card image cap">
-    <div class="card-body">
-        <h5 class="card-title text-center">Service Kulkas</h5>
-      <p class="card-text"></p>
-    </div>
-  </div>
-
-  <div class="card">
-    <img class="card-img-top" src="{{url('assets/produk/tv.png')}}" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title text-center">Service TV</h5>
-      <p class="card-text"></p>
-    </div>
-  </div>
-
-  <div class="card">
-    <img class="card-img-top" src="{{url('assets/produk/pum.png')}}" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title text-center">Service Pompa Air</h5>
-    </div>
-  </div>
-
+  </a>
+</div>
+@endforeach
 </div>
 </div>
-
 <br>
 <br>
 <div class="" style="background-color: #f6f6f6; padding: 30px;">	
-<div class="container justify-content-center">
-	<h4 class="text-center mb-5">Cara Memesan Layanan Suvis Indonesia</h4>
-	<div class="row text-center">
-		<div class="col-md-4 ">
-			<img src="{{url('assets/icon/1.png')}}" width="90">
-			<h5>Pilih Layanan Suvis</h5>
-			<p class="text-center">Pilih layanan sesuai dengan yang anda butuhkan</p>
-		</div>
-		<div class="col-md-4">
-			<img src="{{url('assets/icon/2.png')}}" width="90">
-			<h5>Pilih Penyedia Jasa</h5>
-			<p class="text-center">Tentukan lokasi, pilih tanggal dan waktu Anda. Kami akan menghubungi Anda.</p>
-		</div>
-		<div class="col-md-4">
-			<img src="{{url('assets/icon/3.png')}}" width="90">
-			<h5>Tunggu Teknisi Datang</h5>
-			<p class="text-center">Silahkan Duduk dan Bersantai. Teknisi berpengalaman dan berperalatan lengkap akan berada di rumah anda tepat waktu.</p>
-		</div>
-	</div>
+  <div class="container justify-content-center">
+   <h4 class="text-center mb-5">Cara Memesan Layanan Suvis Indonesia</h4>
+   <div class="row text-center">
+    <div class="col-md-4 ">
+     <img src="{{url('assets/icon/1.png')}}" width="90">
+     <h5>Pilih Layanan Suvis</h5>
+     <p class="text-center">Pilih layanan sesuai dengan yang anda butuhkan</p>
+   </div>
+   <div class="col-md-4">
+     <img src="{{url('assets/icon/2.png')}}" width="90">
+     <h5>Pilih Penyedia Jasa</h5>
+     <p class="text-center">Tentukan lokasi, pilih tanggal dan waktu Anda. Kami akan menghubungi Anda.</p>
+   </div>
+   <div class="col-md-4">
+     <img src="{{url('assets/icon/3.png')}}" width="90">
+     <h5>Tunggu Teknisi Datang</h5>
+     <p class="text-center">Silahkan Duduk dan Bersantai. Teknisi berpengalaman dan berperalatan lengkap akan berada di rumah anda tepat waktu.</p>
+   </div>
+ </div>
 </div>
 </div>
 

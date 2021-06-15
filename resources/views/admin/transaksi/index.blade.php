@@ -45,34 +45,22 @@
                     <table id="example1" class="table table-bordered table-striped">
                         <thead>
                             <tr>
-                                <<<<<<< HEAD <th>No</th>
-                                    <th>ID Konsumen</th>
-                                    <th>Nama Konsumen</th>
-                                    <th>Telp Konsumen</th>
-                                    =======
+                        
                                     <th>Rendering engine</th>
                                     <th>Browser</th>
                                     <th>Platform(s)</th>
                                     <th>Engine version</th>
-                                    >>>>>>> f034a29 (nambah data tables)
                                     <th>Edit</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <<<<<<< HEAD <td>1</td>
-                                    <td>K0001</td>
-                                    <td>Aldi</td>
-                                    <td>085737737738</td>
-                                    <td><a href="" class="btn btn-primary"><i class="fas fa-pencil-alt"></i>Detail</a></td>
-                                    =======
                                     <td>Tasman</td>
                                     <td>Internet Explorer 5.1</td>
                                     <td>Mac OS 7.6-9</td>
                                     <td>1</td>
                                     <td>C</td>
                             </tr>
-<<<<<<< HEAD
                             <tr>
                                 <td>Tasman</td>
                                 <td>Internet Explorer 5.2</td>
@@ -135,10 +123,9 @@
                                 <td>-</td>
                                 <td>-</td>
                                 <td>U</td>
-                                >>>>>>> f034a29 (nambah data tables)
+                             
                             </tr>
-=======
->>>>>>> a24647e (edit layanan dan edit page lain)
+
                         </tbody>
                     </table>
                 </div>
