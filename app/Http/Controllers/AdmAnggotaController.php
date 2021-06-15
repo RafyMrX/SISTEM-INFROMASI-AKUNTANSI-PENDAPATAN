@@ -103,14 +103,19 @@ class AdmAnggotaController extends Controller
             'deskripsi' => 'required',
             'harga' => 'required',
         ]);
-
+        if ($request->input('jabatan') == "Karyawan") {
+            $jabatan = 0;
+        } elseif ($request->input('jabatan') == "Manager") {
+            $jabatan = 1;
+        };
         Anggota::where('id_anggota', $request->input('kode'))->update([
             'username' => $request->input('username'),
             'nama_anggota' => $request->input('nama'),
-            'is_admin' => $request->input('username'),
+            'jabatan' => $request->input('jabatan'),
+            'is_admin' => $jabatan,
             'password' => Hash::make($request->input('password'))
         ]);
-        return redirect('/anggota')->with('success', '');
+        return redirect('/anggota')->withSuccess('Data Berhasil DiUpdate');
     }
 
     /**
