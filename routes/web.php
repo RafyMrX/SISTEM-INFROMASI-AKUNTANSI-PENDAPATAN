@@ -62,6 +62,7 @@ Route::get('/adelete/{id}', [AdmAnggotaController::class, 'destroy']);
 Route::get('/anggota/edit', [AdmAnggotaController::class, 'edit']);
 Route::get('/anggota/{id}', [AdmAnggotaController::class, 'update']);
 
+
 // Konsumen
 Route::get('/konsumen', [AdmKonsumenController::class, 'index']);
 
