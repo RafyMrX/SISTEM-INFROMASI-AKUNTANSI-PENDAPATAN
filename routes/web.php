@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdmAnggotaController;
 use App\Http\Controllers\AdmHomeController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AdmKonsumenController;
 use App\Http\Controllers\AdmLayananController;
@@ -20,14 +21,15 @@ Route::get('/', [PagesController::class, 'index']);
 // PEMESANAN
 Route::get('/pemesanan', [PemesananController::class, 'index']);
 Route::get('/nota-pemesanan', [PagesController::class, 'nota']);
-Route::get('/login', [PagesController::class, 'login']);
-Route::get('/register', [PagesController::class, 'register']);
-
+Route::get('/login', [PagesController::class, 'login'])->middleware('AlreadyLoginUser');
+Route::get('/daftar', [AuthController::class, 'RegisterPage']);
+Route::post('/postregister', [AuthController::class, 'PostRegister']);
 
 // TRANSAKSI
 Route::get('/transaksi', [TransaksiController::class, 'index']);
 Route::get('/konfirmasi', [KonfirmasiController::class, 'index']);
-
+Route::post('/loginpost', [AuthController::class, 'PostLogin']);
+Route::get('/logout', [AuthController::class, 'Logout']);
 
 
 // ====================================================================
@@ -66,7 +68,7 @@ Route::get('/konsumen', [AdmKonsumenController::class, 'index']);
 Route::get('/kdelete/{id}', [AdmKonsumenController::class, 'destroy']);
 
 // Pemesanan
-Route::get('/pemesanan', [AdmPemesananController::class, 'index']);
+Route::get('/admpemesanan', [AdmPemesananController::class, 'index']);
 
 //Transaksi
-Route::get('/transaksi', [AdmTransaksiController::class, 'index']);
+Route::get('/admtransaksi', [AdmTransaksiController::class, 'index']);

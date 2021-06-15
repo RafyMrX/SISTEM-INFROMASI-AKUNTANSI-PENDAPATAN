@@ -58,8 +58,8 @@ class PemesananController extends Controller
 
         );
 
-
-        return redirect('/nota-pemesanan')->with('success', 'Berhasil Melakukan Pemesanan');        
+        $nama = $request->input('nama');
+        return redirect('/nota-pemesanan')->with('success', 'Berhasil Melakukan Pemesanan', compact('nama'));        
 
     }
 
