@@ -13,11 +13,11 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label for=""><strong>Email</strong></label>
-                        <input type="text" name="email" class="form-control" placeholder="Email">
+                        <input type="text" name="email" class="form-control" required placeholder="Email" value="{{old('email')}}">
                     </div>
                     <div class="form-group">
                         <label for=""><strong>Password</strong></label>
-                        <input type="password" name="password" class="form-control" placeholder="Password">
+                        <input type="password" required name="password" class="form-control" placeholder="Password">
                     </div>
                 </div>
                 <div class="card-footer">

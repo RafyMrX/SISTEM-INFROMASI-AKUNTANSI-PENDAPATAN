@@ -17,9 +17,11 @@ Route::get('/login',[PagesController::class, 'login']);
 Route::get('/register',[PagesController::class, 'register']);
 
 // AKUN 
-Route::get('/login',[AuthController::class, 'LoginPage']);
+Route::get('/login',[AuthController::class, 'LoginPage'])->middleware('AlreadyLoginUser');
+Route::get('/logout',[AuthController::class, 'Logout']);
 Route::get('/daftar',[AuthController::class, 'RegisterPage']);
 Route::post('/postregister',[AuthController::class, 'PostRegister']);
+Route::post('/loginpost',[AuthController::class, 'PostLogin']);
 
 // TRANSAKSI
 Route::get('/transaksi',[TransaksiController::class, 'index']);

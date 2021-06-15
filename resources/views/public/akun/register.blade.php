@@ -11,14 +11,29 @@
             <form action="{{url('/postregister') }}" method="post">
                 @csrf
                 <div class="card-body">
-                    <div class="form-group">
-                        <label for=""><strong>Nama Lengkap</strong></label>
-                        <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" placeholder="Nama Lengkap" value="{{old('name')}}">
-                        @error('name')
-                        <div class="invalid-feedback">
-                            Nama Harus Diisi
+                    <div class="row">
+                         <div class="col-md-6">
+                            <div class="form-group">
+                                <label for=""><strong>Nama</strong></label>
+                                <input type="text" name="name_pal" class="form-control @error('name_pal') is-invalid @enderror" placeholder="Nama " value="{{old('name_pal')}}">
+                                @error('name_pal')
+                                <div class="invalid-feedback">
+                                    Nama Harus Diisi
+                                </div>
+                                @enderror
+                            </div>
                         </div>
-                        @enderror
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for=""><strong>Nama Lengkap</strong></label>
+                                <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" placeholder="Nama Lengkap" value="{{old('name')}}">
+                                @error('name')
+                                <div class="invalid-feedback">
+                                    Nama Lengkap Harus Diisi
+                                </div>
+                                @enderror
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for=""><strong>Alamat</strong></label>

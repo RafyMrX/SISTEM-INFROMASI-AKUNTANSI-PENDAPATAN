@@ -74,7 +74,13 @@
 				<p>Tarif diatas merupakan biaya minimum jasa SUVIS INDONESIA yaitu peprbaikan standar (Inspeksi dan perbaikan ringan). Untuk pekerjaan selain perbaikan standar seperti ganti sparepart, mitra Suvis akan mengajukan penawaran harga diluar aplikasi.</p>
 				<p>Dengan menekan tombol "Lanjut", saya menyetujui Syarat dan Ketentuan yang berlaku</p>
 
-				<input type="submit" class="btn btn-success btn-block" value="Lanjut">
+				<input type="submit" class="btn btn-success btn-block " value="Lanjut" @if(!session()->has('SessionPublic')) disabled @endif>
+
+				@if(!session()->has('SessionPublic'))
+				<div style="color: red;">
+					Login Terlebih dahulu untuk melakukan pemesanan
+				</div>
+				@endif
 			</div>
 
 			<div class="card kotak">

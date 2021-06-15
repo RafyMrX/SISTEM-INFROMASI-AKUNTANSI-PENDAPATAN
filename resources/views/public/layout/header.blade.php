@@ -43,13 +43,26 @@
    <!--    <li class="nav-item">
         <a class="nav-link" href="#">Checkout</a>
       </li> -->
+
       <li class="nav-item dropdown">
+        @if(session()->has('SessionPublic'))
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Akun
+         {{session()->get('SessionNama')}}
         </a>
+        @else
+         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Akun
+        </a>
+        @endif
+
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          @if(session()->has('SessionPublic'))
+          <a class="dropdown-item" href="{{url('/logout')}}">Logout</a>
+          @else
           <a class="dropdown-item" href="{{url('/login')}}">Login</a>
           <a class="dropdown-item" href="{{url('/daftar')}}">Daftar</a>
+          @endif
+        </div>
       </li>
     </ul>
   </div>
