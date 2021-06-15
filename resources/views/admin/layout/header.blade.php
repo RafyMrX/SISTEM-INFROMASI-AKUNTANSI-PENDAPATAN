@@ -55,14 +55,6 @@
                     <div class="dropdown-menu dropdown-menu dropdown-menu-right">
                         <div class="dropdown"></div>
                         <a href="#" class="dropdown-item">
-                            <i class="far fa-user"></i> Profile
-                        </a>
-                        <div class="dropdown"></div>
-                        <a href="#" class="dropdown-item">
-                            <i class="fas fa-cog"></i> Settings
-                        </a>
-                        <div class="dropdown"></div>
-                        <a href="#" class="dropdown-item">
                             <i class="fas fa-sign-out-alt"></i> Logout
                         </a>
                     </div>
@@ -101,6 +93,15 @@
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>
                                     Home
+                                    <!-- <i class="right fas fa-angle-left"></i> -->
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{url('/anggota')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>
+                                    Anggota
                                     <!-- <i class="right fas fa-angle-left"></i> -->
                                 </p>
                             </a>
