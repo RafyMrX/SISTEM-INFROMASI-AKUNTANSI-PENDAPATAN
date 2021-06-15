@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Konsumen;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -82,6 +83,7 @@ class AdmKonsumenController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Konsumen::where('id_konsumen', $id)->delete();
+        return redirect('/konsumen')->withSuccess('Data Berhasil Dihapus');
     }
 }
