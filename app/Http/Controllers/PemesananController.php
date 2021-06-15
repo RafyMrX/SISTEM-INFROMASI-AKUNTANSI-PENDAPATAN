@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pemesanan;
+use App\Models\Layanan;
 use Illuminate\Http\Request;
 
 class PemesananController extends Controller
@@ -12,9 +13,10 @@ class PemesananController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        return view('public.pemesanan.index');
+        $layanan = Layanan::where('id_layanan', $id)->get(); 
+        return view('public.pemesanan.index', compact('layanan'));
     }
 
     /**
@@ -35,7 +37,30 @@ class PemesananController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(
+            [
+                'nama' => 'required',
+                'alamat' => 'required',
+                'tlp' => 'required',
+            ]
+        );
+
+        $pemesanan = Pemesanan::create(
+            [
+                'id_konsumen' => $request->input('id_user'),
+                'nama' => $request->input('nama'),
+                'alamat_pemesanan' => $request->input('alamat'),
+                'tlp' => $request->input('tlp'),
+                'waktu_pemesanan' => $request->input('jam'),
+                'waktu_kunjungan' => $request->input('tgl'),
+                'status_pemesanan' => '0',
+            ]
+
+        );
+
+
+        return redirect('/nota-pemesanan')->with('success', 'Berhasil Melakukan Pemesanan');        
+
     }
 
     /**

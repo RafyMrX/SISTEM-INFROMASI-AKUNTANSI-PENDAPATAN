@@ -16,9 +16,7 @@ class AdmPemesananController extends Controller
     {
         //DB Pemesanan
         $pemesanan = Pemesanan::All();
-        $count = Pemesanan::All()->count();
-
-        return view('admin.pemesanan.index', compact('pemesanan', 'count'));
+        return view('admin.pemesanan.index', compact('pemesanan'));
     }
 
     /**

@@ -39,6 +39,10 @@ Route::get('/konfirmasi', [KonfirmasiController::class, 'index']);
 
 //Home
 Route::get('/home', [AdmHomeController::class, 'index']);
+Route::get('/pemesanan/{id}', [PemesananController::class, 'index']);
+Route::post('/postpemesanan', [PemesananController::class, 'store']);
+
+
 
 // Layanan
 Route::get('/layanan', [AdmLayananController::class, 'index']);
