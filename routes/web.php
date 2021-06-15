@@ -25,9 +25,9 @@ Route::get('/login', [PagesController::class, 'login']);
 Route::get('/register', [PagesController::class, 'register']);
 
 // AKUN 
-Route::get('/login',[AuthController::class, 'LoginPage']);
-Route::get('/daftar',[AuthController::class, 'RegisterPage']);
-Route::post('/postregister',[AuthController::class, 'PostRegister']);
+Route::get('/login', [AuthController::class, 'LoginPage']);
+Route::get('/daftar', [AuthController::class, 'RegisterPage']);
+Route::post('/postregister', [AuthController::class, 'PostRegister']);
 
 // TRANSAKSI
 Route::get('/transaksi', [TransaksiController::class, 'index']);

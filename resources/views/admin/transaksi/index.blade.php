@@ -15,6 +15,7 @@
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="{{url('/home')}}">Home</a></li>
                         <li class="breadcrumb-item active">Data Transaksi</li>
+
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -44,20 +45,96 @@
                     <table id="example1" class="table table-bordered table-striped">
                         <thead>
                             <tr>
-                                <th>No</th>
-                                <th>ID Konsumen</th>
-                                <th>Nama Konsumen</th>
-                                <th>Telp Konsumen</th>
-                                <th>Edit</th>
+                                <<<<<<< HEAD <th>No</th>
+                                    <th>ID Konsumen</th>
+                                    <th>Nama Konsumen</th>
+                                    <th>Telp Konsumen</th>
+                                    =======
+                                    <th>Rendering engine</th>
+                                    <th>Browser</th>
+                                    <th>Platform(s)</th>
+                                    <th>Engine version</th>
+                                    >>>>>>> f034a29 (nambah data tables)
+                                    <th>Edit</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
+                                <<<<<<< HEAD <td>1</td>
+                                    <td>K0001</td>
+                                    <td>Aldi</td>
+                                    <td>085737737738</td>
+                                    <td><a href="" class="btn btn-primary"><i class="fas fa-pencil-alt"></i>Detail</a></td>
+                                    =======
+                                    <td>Tasman</td>
+                                    <td>Internet Explorer 5.1</td>
+                                    <td>Mac OS 7.6-9</td>
+                                    <td>1</td>
+                                    <td>C</td>
+                            </tr>
+                            <tr>
+                                <td>Tasman</td>
+                                <td>Internet Explorer 5.2</td>
+                                <td>Mac OS 8-X</td>
                                 <td>1</td>
-                                <td>K0001</td>
-                                <td>Aldi</td>
-                                <td>085737737738</td>
-                                <td><a href="" class="btn btn-primary"><i class="fas fa-pencil-alt"></i>Detail</a></td>
+                                <td>C</td>
+                            </tr>
+                            <tr>
+                                <td>Misc</td>
+                                <td>NetFront 3.1</td>
+                                <td>Embedded devices</td>
+                                <td>-</td>
+                                <td>C</td>
+                            </tr>
+                            <tr>
+                                <td>Misc</td>
+                                <td>NetFront 3.4</td>
+                                <td>Embedded devices</td>
+                                <td>-</td>
+                                <td>A</td>
+                            </tr>
+                            <tr>
+                                <td>Misc</td>
+                                <td>Dillo 0.8</td>
+                                <td>Embedded devices</td>
+                                <td>-</td>
+                                <td>X</td>
+                            </tr>
+                            <tr>
+                                <td>Misc</td>
+                                <td>Links</td>
+                                <td>Text only</td>
+                                <td>-</td>
+                                <td>X</td>
+                            </tr>
+                            <tr>
+                                <td>Misc</td>
+                                <td>Lynx</td>
+                                <td>Text only</td>
+                                <td>-</td>
+                                <td>X</td>
+                            </tr>
+                            <tr>
+                                <td>Misc</td>
+                                <td>IE Mobile</td>
+                                <td>Windows Mobile 6</td>
+                                <td>-</td>
+                                <td>C</td>
+                            </tr>
+                            <tr>
+                                <td>Misc</td>
+                                <td>PSP browser</td>
+                                <td>PSP</td>
+                                <td>-</td>
+                                <td>C</td>
+                            </tr>
+                            <tr>
+                                <td>Other browsers</td>
+                                <td>All others</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>U</td>
+                                >>>>>>> f034a29 (nambah data tables)
                             </tr>
                         </tbody>
                     </table>
