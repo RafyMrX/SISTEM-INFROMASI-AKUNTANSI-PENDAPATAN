@@ -72,6 +72,7 @@
                                     <td>1</td>
                                     <td>C</td>
                             </tr>
+<<<<<<< HEAD
                             <tr>
                                 <td>Tasman</td>
                                 <td>Internet Explorer 5.2</td>
@@ -136,6 +137,8 @@
                                 <td>U</td>
                                 >>>>>>> f034a29 (nambah data tables)
                             </tr>
+=======
+>>>>>>> a24647e (edit layanan dan edit page lain)
                         </tbody>
                     </table>
                 </div>
