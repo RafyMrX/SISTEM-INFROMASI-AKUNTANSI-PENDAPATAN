@@ -9,7 +9,7 @@
  <div class="card-deck">
   @foreach($layanan as $item)
   <div class="card">
-   <a href="{{url('/pemesanan')}}" >
+   <a href="{{url('/pemesanan/'.$item->id_layanan.'')}}" >
     <img class="card-img-top" src="{{ asset('storage/'.$item->foto_layanan.'')}}" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title text-center">{{$item->nama_layanan}}</h5>

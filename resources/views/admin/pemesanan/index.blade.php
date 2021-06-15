@@ -53,17 +53,18 @@
                             </tr>
                         </thead>
                         <tbody>
+                        @foreach($pemesanan as $item)
                             <tr>
-                              <td>1</td>
-                                    <td>P0001</td>
-                                    <td>K0001</td>
-                                    <td>05-April-21, 10:47:30</td>
-                                    <td>Sudah Dibayar</td>
+                              <td>{{$loop->iteration}}</td>
+                                    <td>{{$item->id_pemesanan}}</td>
+                                    <td>{{$item->id_konsumen}}</td>
+                                    <td>{{$item->waktu_pemesanan}}</td>
+                                    <td>Belum Dibayar</td>
                                     <td><a href="" class="btn btn-primary"><i class="fas fa-pencil-alt"></i>Detail</a>
                                         <a href="" class="btn btn-primary"><i class="fas fa-eye"></i>Lihat Pembayaran</a>
                                     </td>
                             </tr>
-                            
+                    @endforeach
                           
                         </tbody>
                     </table>

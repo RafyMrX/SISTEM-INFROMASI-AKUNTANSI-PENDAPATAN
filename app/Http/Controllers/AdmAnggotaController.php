@@ -63,7 +63,7 @@ class AdmAnggotaController extends Controller
             'is_admin' => $jabatan,
             'password' => Hash::make($request->input('password'))
         ]);
-        return redirect('/anggota')->with('success', '');
+        return redirect('/anggota')->with('success', 'Berhasil Ditambahkan');
     }
 
     /**

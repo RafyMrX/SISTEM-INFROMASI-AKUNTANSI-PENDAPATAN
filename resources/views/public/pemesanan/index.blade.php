@@ -2,7 +2,7 @@
 @section('judul', 'Pemesanan')
 @section('content')
 <h3 class="text-center mt-3 mb-4">Pemesanan</h3>
-
+@foreach($layanan as $item)
 <div class="container">
 	<div class="card-deck">
 		<div class="card kotak">
@@ -11,12 +11,12 @@
 				<tr>
 					<td class="f1">Layanan</td>
 					<td >:</td>
-					<td>Service AC</td>
+					<td>{{$item->nama_layanan}}</td>
 				</tr>
 				<tr>
 					<td class="f1">Subtotal</td>
 					<td>:</td>
-					<td>Rp.60.000</td>
+					<td>Rp. {{number_format($item->harga_layanan)}}</td>
 				</tr>
 				<tr>
 					<td class="f1">Biaya Admin</td>
@@ -31,18 +31,33 @@
 				<tr>
 					<td class="f1"><b>Total</b></td>
 					<td>:</td>
-					<td><b>Rp.70.000</b></td>
+					<td><b>
+						<?php 
+						$admin = 4000;
+						$ppn = 6000;
+						$total = $admin+$ppn+$item->harga_layanan;
+						echo number_format($total);
+						?>
+
+					</b></td>
 				</tr>
 			</table>
 		</div>
 		<div class="card kotak">
 			<p class="text-center font-weight-bold">Data Konsumen</p>
-			<form action="{{url('/nota-pemesanan')}}" method="">
+			<form action="{{url('/postpemesanan')}}" method="post">
+				@csrf
+				<input type="hidden" name="id_user" value="{{session()->get('SessionPublic')}}">
 
 				<div class="form-group row">
 					<label for="staticEmail" class="col-sm-2 col-form-label">Nama</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="staticEmail">
+						<input type="text" class="form-control @error('nama') is-invalid @enderror" id="staticEmail" name="nama" value="{{old('nama')}}"  autocomplete='off'>
+						@error('nama')
+						<div class="invalid-feedback">
+							Nama Harus Diisi
+						</div>
+						@enderror
 					</div>
 				</div>
 
@@ -50,20 +65,31 @@
 				<div class="form-group row">
 					<label for="alamat" class="col-sm-2 col-form-label">Alamat</label>
 					<div class="col-sm-10">
-						<textarea class="form-control" id="Alamat"></textarea>
+						<textarea class="form-control @error('alamat') is-invalid @enderror" id="Alamat" name="alamat">{{old('alamat')}}</textarea>
+						@error('alamat')
+						<div class="invalid-feedback">
+							Alamat Harus Diisi
+						</div>
+						@enderror
 					</div>
 				</div>
 
 				<div class="form-group row">
 					<label for="tel" class="col-sm-2 col-form-label">Telepon</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="tel">
+						<input type="text" class="form-control @error('tlp') is-invalid @enderror" id="tel" name="tlp" value="{{old('tlp')}}"  autocomplete=’off’>
+						@error('tlp')
+						<div class="invalid-feedback">
+							Telepone Harus Diisi
+						</div>
+						@enderror
 					</div>
 				</div>
 
 				
 				
 			</div>
+			@endforeach
 		</div>
 
 		<br>
@@ -88,14 +114,14 @@
 				<div class="form-group row">
 					<label for="tanggal" class="col-sm-2 col-form-label">Tanggal</label>
 					<div class="col-sm-10">
-						<input type="date" class="form-control" id="tanggal">
+						<input type="date" class="form-control" id="tanggal" name="tgl" required>
 					</div>
 				</div>
 
 				<div class="form-group row">
 					<label for="tanggal" class="col-sm-2 col-form-label">Jam</label>
 					<div class="col-sm-10">
-						<input type="time" class="form-control" id="Jam">
+						<input type="time" class="form-control" id="Jam" name="jam" required>
 					</div>
 				</div>
 				
