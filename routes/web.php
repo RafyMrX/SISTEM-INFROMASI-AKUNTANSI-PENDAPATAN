@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdmAnggotaController;
 use App\Http\Controllers\AdmHomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AdmKonsumenController;
@@ -37,6 +38,7 @@ Route::get('/konfirmasi', [KonfirmasiController::class, 'index']);
 // ====================================================================
 // Admin
 
+// Route::group(['middleware']);
 // Route Back End
 Route::get('/login', [AdmLoginController::class, 'index']);
 
@@ -52,7 +54,13 @@ Route::get('/delete/{id}', [AdmLayananController::class, 'destroy']);
 Route::get('/layanan/edit', [AdmLayananController::class, 'edit']);
 Route::post('/layanan/{id}', [AdmLayananController::class, 'update']);
 
-
+// Anggota
+Route::get('/anggota', [AdmAnggotaController::class, 'index']);
+Route::get('/anggota/tambah', [AdmAnggotaController::class, 'create']);
+Route::post('/anggota/tambah', [AdmAnggotaController::class, 'store']);
+Route::get('/adelete/{id}', [AdmAnggotaController::class, 'destroy']);
+Route::get('/anggota/edit', [AdmAnggotaController::class, 'edit']);
+Route::get('/anggota/{id}', [AdmAnggotaController::class, 'update']);
 
 // Konsumen
 Route::get('/konsumen', [AdmKonsumenController::class, 'index']);
