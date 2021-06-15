@@ -40,7 +40,7 @@
                                 <td>{{$item->phone}}</td>
                                 <td>{{$item->email}}</td>
                                 <td>
-                                    <a href="{{url('/delete/'.$item->id.'')}}" class="btn btn-danger confirm"><i class="fas fa-trash-alt"></i></a>
+                                    <a href="{{url('/kdelete/'.$item->id.'')}}" class="btn btn-danger confirm"><i class="fas fa-trash-alt"></i></a>
                                 </td>
                             </tr>
                             @endforeach

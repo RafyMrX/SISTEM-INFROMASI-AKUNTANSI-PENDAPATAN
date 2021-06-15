@@ -63,6 +63,7 @@ Route::get('/anggota/{id}', [AdmAnggotaController::class, 'update']);
 
 // Konsumen
 Route::get('/konsumen', [AdmKonsumenController::class, 'index']);
+Route::get('/kdelete/{id}', [AdmKonsumenController::class, 'destroy']);
 
 // Pemesanan
 Route::get('/pemesanan', [AdmPemesananController::class, 'index']);
