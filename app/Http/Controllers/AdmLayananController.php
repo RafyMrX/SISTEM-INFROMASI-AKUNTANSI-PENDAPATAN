@@ -93,7 +93,7 @@ class AdmLayananController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
 
         $request->validate([
@@ -150,6 +150,6 @@ class AdmLayananController extends Controller
     public function destroy($id)
     {
         Layanan::where('id_layanan', $id)->delete();
-        return redirect('/layanan');
+        return redirect('/layanan')->withSuccess('Data Berhasil Dihapus');
     }
 }

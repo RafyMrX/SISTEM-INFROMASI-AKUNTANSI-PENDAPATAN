@@ -30,6 +30,7 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
+                        @foreach($anggota as $item)
                         <form action="/anggota/edit" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="card-body">
@@ -39,22 +40,22 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Username</label>
-                                    <input type="text" class="form-control" name="username" placeholder="Username">
+                                    <input type="text" class="form-control" name="username" placeholder="Username" value="{{$item->username}}">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Nama Anggota</label>
-                                    <input type="text" class="form-control" name="nama" placeholder="Nama Anggota">
+                                    <input type="text" class="form-control" name="nama" placeholder="Nama Anggota" value="{{$item->nama_anggota}}">
                                 </div>
                                 <div class="form-group">
                                     <label for="gender">Jabatan</label>
                                     <select name="jabatan" class="form-control" id="jabatan">
-                                        <option value='Manager'>Manager</option>
-                                        <option value='Karyawan'>Karyawan</option>
+                                        <option {{ ($item->jabatan) == 'Manager' ? 'selected' : '' }} value='Manager'>Manager</option>
+                                        <option {{ ($item->jabatan) == 'Karyawan' ? 'selected' : '' }} value='Karyawan'>Karyawan</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Password</label>
-                                    <input type="password" class="form-control" name="password" placeholder="*******************">
+                                    <input type="password" class="form-control" name="password" placeholder="*******************" value="{{$item->password}}">
                                 </div>
                             </div>
                             <!-- /.card-body -->
@@ -62,6 +63,7 @@
                                 <button class="btn btn-primary">Submit</button>
                             </div>
                         </form>
+                        @endforeach
                     </div>
                 </div>
             </div>

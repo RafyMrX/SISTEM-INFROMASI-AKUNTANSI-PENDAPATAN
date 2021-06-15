@@ -13,7 +13,6 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PemesananController;
 use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\KonfirmasiController;
-use App\Http\Controllers\AuthController;
 
 // ROUTE FRONT END
 Route::get('/', [PagesController::class, 'index']);
@@ -23,14 +22,6 @@ Route::get('/pemesanan', [PemesananController::class, 'index']);
 Route::get('/nota-pemesanan', [PagesController::class, 'nota']);
 Route::get('/login', [PagesController::class, 'login']);
 Route::get('/register', [PagesController::class, 'register']);
-
-// AKUN 
-
-Route::get('/login', [AuthController::class, 'LoginPage'])->middleware('AlreadyLoginUser');
-Route::get('/logout', [AuthController::class, 'Logout']);
-Route::get('/daftar', [AuthController::class, 'RegisterPage']);
-Route::post('/postregister', [AuthController::class, 'PostRegister']);
-Route::post('/loginpost', [AuthController::class, 'PostLogin']);
 
 
 // TRANSAKSI
@@ -44,7 +35,7 @@ Route::get('/konfirmasi', [KonfirmasiController::class, 'index']);
 
 // Route::group(['middleware']);
 // Route Back End
-Route::get('/admlogin', [AdmLoginController::class, 'index']);
+// Route::get('/login', [AdmLoginController::class, 'index']);
 
 //Home
 Route::get('/home', [AdmHomeController::class, 'index']);
@@ -61,17 +52,16 @@ Route::post('/layanan/{id}', [AdmLayananController::class, 'update']);
 // Anggota
 Route::get('/anggota', [AdmAnggotaController::class, 'index']);
 Route::get('/anggota/tambah', [AdmAnggotaController::class, 'create']);
-Route::get('/anggota/edit', [AdmAnggotaController::class, 'edit']);
 Route::post('/anggota/tambah', [AdmAnggotaController::class, 'store']);
 Route::get('/adelete/{id}', [AdmAnggotaController::class, 'destroy']);
-Route::post('/anggota/{id}', [AdmAnggotaController::class, 'update']);
-
+Route::get('/anggota/edit', [AdmAnggotaController::class, 'edit']);
+Route::get('/anggota/{id}', [AdmAnggotaController::class, 'update']);
 
 // Konsumen
 Route::get('/konsumen', [AdmKonsumenController::class, 'index']);
 
 // Pemesanan
-Route::get('/admpemesanan', [AdmPemesananController::class, 'index']);
+Route::get('/pemesanan', [AdmPemesananController::class, 'index']);
 
 //Transaksi
-Route::get('/admtransaksi', [AdmTransaksiController::class, 'index']);
+Route::get('/transaksi', [AdmTransaksiController::class, 'index']);
