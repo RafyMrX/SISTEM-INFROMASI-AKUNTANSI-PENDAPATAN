@@ -44,7 +44,7 @@ Route::get('/konfirmasi', [KonfirmasiController::class, 'index']);
 
 // Route::group(['middleware']);
 // Route Back End
-Route::get('/login', [AdmLoginController::class, 'index']);
+Route::get('/admlogin', [AdmLoginController::class, 'index']);
 
 //Home
 Route::get('/home', [AdmHomeController::class, 'index']);
