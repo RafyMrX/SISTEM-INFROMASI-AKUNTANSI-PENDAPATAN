@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pemesanan;
+use App\Models\Transaksi;
+use App\Models\generateKode;
 
 class KonfirmasiController extends Controller
 {
@@ -36,8 +38,19 @@ class KonfirmasiController extends Controller
      */
     public function store(Request $request)
     {
+        $kode = new generateKode();
+        $kodetransaksi = $kode->KodeTransaksi();
+         $file = $request->file('bukti');
 
-        return $request->file('bukti');
+         return $file->getSize();
+
+         // if($file->getClientOriginalExtension() == "jpg"){
+         //    echo "berhasil";
+         // }else{
+         //    echo "Salah";
+         // }
+              
+         
     }
 
     /**

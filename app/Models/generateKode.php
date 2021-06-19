@@ -78,4 +78,30 @@ class generateKode extends Model
         }
         return $format;
     }
+
+   public function KodeTransaksi(){
+
+         $transaksi = Transaksi::orderBy('id_transaksi','desc')->first();
+
+        if(empty($transaksi)){
+            $format = "T0001";
+        }else{
+            $kode = $transaksi->id_transaksi;
+            $num = substr($kode, 1, 4);
+            $add = (int) $num + 1;
+            if(strlen($add) == 1){
+                $format = "T000".$add;
+            }else if(strlen($add) == 2){
+                $format = "T00".$add;
+            }
+            else if(strlen($add) == 3){
+                $format = "T0".$add;
+            }else{
+                $format = "T".$add;
+            }
+
+        }
+        return $format;
+    }
+
 }

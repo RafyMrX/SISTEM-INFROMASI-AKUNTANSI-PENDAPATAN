@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Transaksi;
+use App\Models\Pemesanan;
 use Illuminate\Http\Request;
 
 class TransaksiController extends Controller
@@ -15,7 +15,7 @@ class TransaksiController extends Controller
     public function index()
     {
         $id_konsumen = session()->get('SessionPublic');
-        $transaksi = Transaksi::where('id_konsumen', $id_konsumen)->orderBy('id_pemesanan', 'desc')->get(); 
+        $transaksi = Pemesanan::where('id_konsumen', $id_konsumen)->orderBy('id_pemesanan', 'desc')->get(); 
         $jumlah = $transaksi->count();
         return view ('public.transaksi.index', compact('transaksi','jumlah'));
     }
