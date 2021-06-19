@@ -41,14 +41,31 @@ class KonfirmasiController extends Controller
         $kode = new generateKode();
         $kodetransaksi = $kode->KodeTransaksi();
          $file = $request->file('bukti');
+         $id_pemesanan = $request->input('id_pemesanan');
+         if($file->getClientOriginalExtension() == "jpg"){
+            $transaksi = Transaksi::create(
+                [
+                    'id_transaksi' => $kodetransaksi,
+                    'id_pemesanan' => $request->input('id_pemesanan'),
+                    'waktu_transaksi' => date('d-M-Y, H:i:s'),
+                    'bukti_transaksi' => $file->store('image'),
 
-         return $file->getSize();
+                ]
 
-         // if($file->getClientOriginalExtension() == "jpg"){
-         //    echo "berhasil";
-         // }else{
-         //    echo "Salah";
-         // }
+            );
+
+            $pemesanan = Pemesanan::where("id_pemesanan", $id_pemesanan)->update(
+            [
+                'status_pemesanan' => 1,
+            ]
+
+            );
+            return redirect('/transaksi')->with('success', 'Berhasil');  
+         }else{
+
+            // KURANG INI
+             return redirect('/transaksi')->with('error', 'Ekstensi File Harus JPG');  
+         }
               
          
     }

@@ -84,6 +84,7 @@
 			
 			<div class="form-group">
 				<label><b>Foto Bukti</b></label>
+				<input type="hidden" name="id_pemesanan" value="{{$item->id_pemesanan}}">
 				<input type="file" name="bukti" class="form-control">
 				<small id="emailHelp" class="form-text text-muted">Foto Bukti Harus Format JPG dan Ukuran Maks 1 MB</small>
 			</div>
