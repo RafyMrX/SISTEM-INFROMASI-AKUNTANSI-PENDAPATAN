@@ -85,7 +85,7 @@
 			<div class="form-group">
 				<label><b>Foto Bukti</b></label>
 				<input type="file" name="bukti" class="form-control">
-				<small id="emailHelp" class="form-text text-muted">Foto Bukti Harus Format JPG dan Ukuran Maks 10 MB</small>
+				<small id="emailHelp" class="form-text text-muted">Foto Bukti Harus Format JPG dan Ukuran Maks 15 MB</small>
 			</div>
 		</div>
 		<div class="col-md-6">
