@@ -7,6 +7,7 @@
 	<div class="card-deck">
 		<div class="card kotak" style="padding: 20px;">
 			<h3 style="border-bottom: 1px solid #bababa;padding-bottom: 4px; color: orange;" class="text-uppercase">Suvis Indonesia</h3>
+		@foreach($pemesanan as $item)
 		<div class="row">
 			<div class="col-md-6">
 				<p style="font-size: 13pt" class="font-weight-bold">Pemesanan</p>
@@ -15,13 +16,13 @@
 						<td><b>ID</b></td>
 						<td></td>
 						<td></td>
-						<td>P01HS12311</td>
+						<td>{{$item->id_pemesanan}}</td>
 					</tr>
 					<tr>
 						<td><b>Tanggal</b></td>
 						<td></td>
 						<td></td>
-						<td>20-04-2021 07.16</td>
+						<td>{{$item->waktu_kunjungan.', '.$item->waktu_pemesanan}}</td>
 					</tr>
 				</table>
 			</div>
@@ -34,13 +35,13 @@
 						<td><b>ID</b></td>
 						<td></td>
 						<td></td>
-						<td>K01021</td>
+						<td>{{$item->id_konsumen}}</td>
 					</tr>
 					<tr>
 						<td><b>Nama</b></td>
 						<td></td>
 						<td></td>
-						<td>Afif Fathurrahman</td>
+						<td>{{$item->nama}}</td>
 					</tr>
 				</table>
 			</div>
@@ -55,29 +56,29 @@
 				    <tr>
 				      <td>ID Layanan</td>
 				      <td>:</td>
-				      <td class="v">L02</td>
+				      <td class="v">{{$item->id_layanan}}</td>
 				    </tr>
 				    <tr>
 				      <td>Nama Layanan</td>
 				      <td>:</td>
-				      <td  class="v">Service AC</td>
+				      <td  class="v">{{$item->Layanan['nama_layanan']}}</td>
 				    </tr>
 				    <tr>
 				      <td>Waktu Kunjungan</td>
 				      <td>:</td>
-				      <td  class="v">21 April 2021 11.00</td>
+				      <td  class="v">{{date('d-F-Y', strtotime($item->waktu_kunjungan))}}</td>
 				    </tr>
 
 				     <tr>
 				      <td>Alamat</td>
 				      <td>:</td>
-				      <td  class="v">Jl.Tanah Merah Indah 1</td>
+				      <td  class="v">{{$item->alamat_pemesanan}}</td>
 				    </tr>
 
 				     <tr>
 				      <td>Subtotal</td>
 				      <td>:</td>
-				      <td  class="v">Rp.60.000</td>
+				      <td  class="v">Rp.{{number_format($item->Layanan['harga_layanan'])}}</td>
 				    </tr>
 
 				     <tr>
@@ -95,7 +96,7 @@
 				     <tr>
 				      <td><b>Total</b></td>
 				      <td>:</td>
-				      <td  class="v"><b>Rp.70.000</b></td>
+				      <td  class="v"><b>Rp.{{number_format($item->total)}}</b></td>
 				    </tr>
 				  </tbody>
 				</table>
@@ -103,7 +104,7 @@
 
 			<div class="col-md-4">
 				<div class="kotak">
-					<p class="text-center">Silahkan Lakukan Pembayaran <b>Rp. 70.000</b></p>
+					<p class="text-center">Silahkan Lakukan Pembayaran <b>Rp.{{number_format($item->total)}}</b></p>
 
 					<p class="text-center">ke Bank BNI <b>102-13646464-12</b></p>
 
@@ -113,7 +114,7 @@
 		</div>
 
 		</div>
-
+@endforeach
 
 	</div>
 </div>

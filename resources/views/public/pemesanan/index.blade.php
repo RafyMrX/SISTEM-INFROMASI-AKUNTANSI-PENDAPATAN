@@ -48,7 +48,8 @@
 			<form action="{{url('/postpemesanan')}}" method="post">
 				@csrf
 				<input type="hidden" name="id_user" value="{{session()->get('SessionPublic')}}">
-
+				<input type="hidden" name="id_layanan" value="{{$item->id_layanan}}">
+				<input type="hidden" name="total" value="<?php echo $total; ?>">
 				<div class="form-group row">
 					<label for="staticEmail" class="col-sm-2 col-form-label">Nama</label>
 					<div class="col-sm-10">

@@ -9,4 +9,9 @@ class Transaksi extends Model
 {
     protected $table = "pemesanan";
     protected $guarded = ['created_at', "updated_at"];
+
+    public function layanan(){
+    	return $this->belongsTo(layanan::class,'id_layanan','id_layanan');
+    }
+
 }

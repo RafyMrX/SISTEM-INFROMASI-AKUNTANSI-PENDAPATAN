@@ -6,7 +6,8 @@
 <p>Kirim bukti pembayaran anda disini</p>
 
 
-	<h5  style="border: 1px solid #000; padding: 10px; width: 272px; font-weight: bold;">Total Tagihan Anda Rp.70.000</h5>
+	@foreach($pemesanan as $item)
+	<h5  style="border: 1px solid #000; padding: 10px; width: 290px; font-weight: bold;">Total Tagihan Anda Rp.{{number_format($item->total)}}</h5>
 	<br>
 	<div class="row">
 			<div class="col-md-6">
@@ -16,13 +17,13 @@
 						<td><b>ID</b></td>
 						<td></td>
 						<td></td>
-						<td>P01HS12311</td>
+						<td>{{$item->id_pemesanan}}</td>
 					</tr>
 					<tr>
 						<td><b>Tanggal</b></td>
 						<td></td>
 						<td></td>
-						<td>20-04-2021 07.16</td>
+						<td>{{$item->waktu_kunjungan.', '.$item->waktu_pemesanan}}</td>
 					</tr>
 				</table>
 			</div>
@@ -35,13 +36,13 @@
 						<td><b>ID</b></td>
 						<td></td>
 						<td></td>
-						<td>K01021</td>
+						<td>{{$item->id_konsumen}}</td>
 					</tr>
 					<tr>
 						<td><b>Nama</b></td>
 						<td></td>
 						<td></td>
-						<td>Afif Fathurrahman</td>
+						<td>{{$item->nama}}</td>
 					</tr>
 				</table>
 			</div>
@@ -55,28 +56,29 @@
 				<tr>
 					<td>ID Layanan</td>
 					<td>:</td>
-					<td>L02</td>
+					<td>{{$item->id_layanan}}</td>
 				</tr>
 				<tr>
 					<td>Nama Layanan</td>
 					<td>:</td>
-					<td>Service AC</td>
+					<td>{{$item->Layanan['nama_layanan']}}</td>
 				</tr>
 				<tr>
 					<td>Waktu Kunjungan</td>
 					<td>:</td>
-					<td>21 April 2021 17.00</td>
+					<td>{{date('d-F-Y', strtotime($item->waktu_kunjungan))}}</td>
 				</tr>
 				<tr>
 					<td>Alamat</td>
 					<td>:</td>
-					<td>Jl.Tanah Merah Indah 1</td>
+					<td>{{$item->alamat_pemesanan}}</td>
 				</tr>
 			</table>
 		</div>
 	</div>
 <br>
-<form>
+<form action="{{url('/kirimbukti')}}" method="post" enctype="multipart/form-data">
+	@csrf
 	<div class="row">
 		<div class="col-md-6">
 			
@@ -93,5 +95,5 @@
 	</div>
 </form>
 </div>
-
+@endforeach
 @endsection

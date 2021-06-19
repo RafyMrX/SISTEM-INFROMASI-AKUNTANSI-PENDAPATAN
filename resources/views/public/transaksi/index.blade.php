@@ -9,7 +9,7 @@
   <table class="table table-striped text-center">
   <thead>
     <tr>
-      <th scope="col">Kode</th>
+      <th scope="col">Kode Pemesanan</th>
       <th scope="col">Layanan</th>
       <th scope="col">Status</th>
       <th scope="col">Total</th>
@@ -17,14 +17,32 @@
     </tr>
   </thead>
   <tbody>
+  @if(session()->has('SessionPublic'))
+  @if($jumlah > 0)
+  @foreach($transaksi as $item)
     <tr>
-      <td>P066h4</td>
-      <td>Service AC</td>
+      <td>{{$item->id_pemesanan}}</td>
+      <td>{{$item->layanan['nama_layanan']}}</td>
+      @if($item->status_pemesanan == '0')
       <td>Belum Dibayar</td>
-      <td>Rp.20.000</td>
-      <td><a href="" class="btn btn-secondary">Detail</a> &nbsp; <a href="{{url('/konfirmasi')}}" class="btn btn-success">Input Pembayaran</a>
+      @else
+      <td>Sudah Dibayar</td>
+      @endif
+      <td>Rp.{{number_format($item->total)}}</td>
+      <td><a href="{{url('/nota-pemesanan/'.$item->id_pemesanan.'')}}" class="btn btn-secondary">Detail</a> &nbsp; <a href="{{url('/konfirmasi/'.$item->id_pemesanan.'')}}" class="btn btn-success">Input Pembayaran</a>
       	<!-- <a href="" class="btn btn-warning">Lihat Pembayaran</a> --></td>
     </tr>
+    @endforeach
+    @else
+     <tr>
+      <td colspan="5">Tidak Ada Data Transaksi</td>
+    </tr>
+    @endif
+    @else
+    <tr>
+      <td colspan="5">Login Terlebih dahulu Untuk Melihat Transaksi</td>
+    </tr>
+    @endif
   </tbody>
 </table>
 

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\generateKode;
 use App\Models\Pemesanan;
 use App\Models\Layanan;
 use Illuminate\Http\Request;
@@ -37,6 +37,10 @@ class PemesananController extends Controller
      */
     public function store(Request $request)
     {
+        $generate = new generateKode();
+        $kode = $generate->KodePemesanan();
+
+
         $request->validate(
             [
                 'nama' => 'required',
@@ -47,19 +51,20 @@ class PemesananController extends Controller
 
         $pemesanan = Pemesanan::create(
             [
+                'id_pemesanan' => $kode,
                 'id_konsumen' => $request->input('id_user'),
+                'id_layanan' => $request->input('id_layanan'),
                 'nama' => $request->input('nama'),
                 'alamat_pemesanan' => $request->input('alamat'),
                 'tlp' => $request->input('tlp'),
                 'waktu_pemesanan' => $request->input('jam'),
                 'waktu_kunjungan' => $request->input('tgl'),
                 'status_pemesanan' => '0',
+                'total' => $request->input('total'),
             ]
 
         );
-
-        $nama = $request->input('nama');
-        return redirect('/nota-pemesanan')->with('success', 'Berhasil Melakukan Pemesanan', compact('nama'));        
+        return redirect('/nota-pemesanan/'.$kode.'')->with('success', 'Berhasil Melakukan Pemesanan');        
 
     }
 

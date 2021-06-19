@@ -7,6 +7,32 @@ use Illuminate\Database\Eloquent\Model;
 
 class generateKode extends Model
 {
+
+        public function KodePemesanan(){
+
+         $pemesanan = Pemesanan::orderBy('id_pemesanan','desc')->first();
+
+        if(empty($pemesanan)){
+            $format = "P0001";
+        }else{
+            $kode = $pemesanan->id_pemesanan;
+            $num = substr($kode, 1, 4);
+            $add = (int) $num + 1;
+            if(strlen($add) == 1){
+                $format = "P000".$add;
+            }else if(strlen($add) == 2){
+                $format = "P00".$add;
+            }
+            else if(strlen($add) == 3){
+                $format = "P0".$add;
+            }else{
+                $format = "P".$add;
+            }
+
+        }
+        return $format;
+    }
+
     public function KodeLayanan()
     {
         $layanan = Layanan::orderBy('id_layanan', 'desc')->first();

@@ -27,7 +27,14 @@ Route::post('/postregister', [AuthController::class, 'PostRegister']);
 
 // TRANSAKSI
 Route::get('/transaksi', [TransaksiController::class, 'index']);
-Route::get('/konfirmasi', [KonfirmasiController::class, 'index']);
+Route::get('/nota-pemesanan/{id}', [KonfirmasiController::class, 'show']);
+Route::get('/konfirmasi/{id}', [KonfirmasiController::class, 'index']);
+Route::post('/kirimbukti', [KonfirmasiController::class, 'store']);
+
+
+
+
+//
 Route::post('/loginpost', [AuthController::class, 'PostLogin']);
 Route::get('/logout', [AuthController::class, 'Logout']);
 

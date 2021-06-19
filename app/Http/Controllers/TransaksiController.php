@@ -14,7 +14,10 @@ class TransaksiController extends Controller
      */
     public function index()
     {
-        return view ('public.transaksi.index');
+        $id_konsumen = session()->get('SessionPublic');
+        $transaksi = Transaksi::where('id_konsumen', $id_konsumen)->orderBy('id_pemesanan', 'desc')->get(); 
+        $jumlah = $transaksi->count();
+        return view ('public.transaksi.index', compact('transaksi','jumlah'));
     }
 
     /**

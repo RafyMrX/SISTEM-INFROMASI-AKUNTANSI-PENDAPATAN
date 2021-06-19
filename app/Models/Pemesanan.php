@@ -9,4 +9,8 @@ class Pemesanan extends Model
 {
     protected $table = 'pemesanan';
     protected $guarded = ['created_at', 'updated_at'];
+
+    public function Layanan(){
+    	return $this->belongsTo(Layanan::class,'id_layanan','id_layanan');
+    }
 }
