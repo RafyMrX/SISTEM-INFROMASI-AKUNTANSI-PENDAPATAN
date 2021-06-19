@@ -24,12 +24,15 @@
       <td>{{$item->id_pemesanan}}</td>
       <td>{{$item->layanan['nama_layanan']}}</td>
       @if($item->status_pemesanan == '0')
-      <td>Belum Dibayar</td>
+      <td style="color: red;font-weight: bold;">Belum Dibayar</td>
       @else
-      <td>Sudah Dibayar</td>
+      <td style="color: green;font-weight: bold;">Sudah Dibayar</td>
       @endif
       <td>Rp.{{number_format($item->total)}}</td>
-      <td><a href="{{url('/nota-pemesanan/'.$item->id_pemesanan.'')}}" class="btn btn-secondary">Detail</a> &nbsp; <a href="{{url('/konfirmasi/'.$item->id_pemesanan.'')}}" class="btn btn-success">Input Pembayaran</a>
+      <td><a href="{{url('/nota-pemesanan/'.$item->id_pemesanan.'')}}" class="btn btn-secondary">Detail</a> &nbsp; 
+      @if($item->status_pemesanan == '0')
+      <a href="{{url('/konfirmasi/'.$item->id_pemesanan.'')}}" class="btn btn-success">Input Pembayaran</a>
+      @endif
       	<!-- <a href="" class="btn btn-warning">Lihat Pembayaran</a> --></td>
     </tr>
     @endforeach

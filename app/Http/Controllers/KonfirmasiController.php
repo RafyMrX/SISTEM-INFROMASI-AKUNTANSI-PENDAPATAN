@@ -36,7 +36,7 @@ class KonfirmasiController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->file('bukti'));
+
         return $request->file('bukti');
     }
 
