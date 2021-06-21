@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" type="text/css" href="{{url('assets/css/style.css')}}">
 
-    
+
 
     <title>@yield('judul')</title>
   </head>
@@ -34,10 +34,10 @@
         <a class="nav-link" href="{{url('/')}}">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#memesan">Cara Memesan</a>
+        <a class="nav-link" href="{{url('/#memesan')}}">Cara Memesan</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#tentang">Tentang Suvis</a>
+        <a class="nav-link" href="{{url('/#tentang')}}">Tentang Suvis</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{url('/transaksi')}}">Transaksi</a>

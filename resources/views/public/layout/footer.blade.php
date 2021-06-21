@@ -51,18 +51,7 @@
       <!-- Grid column -->
 
       <!-- Grid column -->
-      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-        <!-- Links -->
 
-        <h6 class="text-uppercase fw-bold mb-4">
-          Layanan
-        </h6>
-        @foreach($layanan as $item)
-        <p>
-          <a href="{{url('/pemesanan/'.$item->id_layanan.'')}}" class="text-reset">{{$item->nama_layanan}}</a>
-        </p>
-        @endforeach
-      </div>
       <!-- Grid column -->
 
       <!-- Grid column -->
@@ -113,14 +102,6 @@
 </footer>
 <!-- Footer -->
 
-<script type="text/javascript">
-  $('.test, .nav-link, .navbar-brand, .new-button').click(function() {
-    var sectionTo = $(this).attr('href');
-    $('html, body').animate({
-      scrollTop: $(sectionTo).offset().top
-    }, 1500);
-  });  
-</script>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

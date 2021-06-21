@@ -8,9 +8,6 @@ use Illuminate\Support\Facades\Hash;
 class AuthController extends Controller
 {
 // HALAMAN AKUN
-    public function LoginPage(){
-    	return view('public.akun.login');
-    }
 
       public function RegisterPage(){
     	return view('public.akun.register');
