@@ -63,8 +63,8 @@
                                 <td><img src="{{ asset('storage/'.$item->foto_layanan.'')}}" width="130"></td>
                                 <td>Rp. {{$item->harga_layanan}}</td>
                                 <td>
-                                    <a href="{{url('/layanan/'.$item->id_layanan.'')}}" class="btn btn-primary"><i class="fas fa-pencil-alt"></i></a>
-                                    <a href="{{url('/delete/'.$item->id_layanan.'')}}" class="btn btn-danger confirm"><i class="fas fa-trash-alt"></i></a>
+                                    <a href="{{url('/layanan/'.$item->id_layanan.'')}}" class="btn btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                    <a href="{{url('/delete/'.$item->id_layanan.'')}}" class="btn btn-danger confirm"><i class="fa fa-trash" aria-hidden="true"></i></a>
                                     <!-- <form action="/layanan/{{$item->id_layanan}}" method="post" class="d-inline" id="delete{{$item->id_layanan}}"> -->
                                     <!-- @method('delete')
                                     @csrf -->

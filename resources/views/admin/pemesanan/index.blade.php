@@ -61,7 +61,7 @@
                                     <td>{{$item->waktu_pemesanan}}</td>
                                     <td>Belum Dibayar</td>
                                     <td><a href="" class="btn btn-primary"><i class="fas fa-pencil-alt"></i>Detail</a>
-                                        <a href="" class="btn btn-primary"><i class="fas fa-eye"></i>Lihat Pembayaran</a>
+                                        <a href="" class="btn btn-primary"><i class="fa fa-eye aria-hidden"= true></i> &nbsp; Lihat Pembayaran</a>
                                     </td>
                             </tr>
                     @endforeach

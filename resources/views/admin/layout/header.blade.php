@@ -9,7 +9,7 @@
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{url('assets/admin/plugins/fontawesome-free/css/all.min.css')}}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Tempusdominus Bootstrap 4 -->
@@ -29,6 +29,13 @@
     <!-- DataTables -->
     <link rel="stylesheet" href="{{url('assets/admin/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
     <link rel="stylesheet" href="{{url('assets/admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -79,7 +86,7 @@
                         <img src="{{url('assets/admin/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Alexander Pierce</a>
+                        <a href="#" class="d-block">Admin</a>
                     </div>
                 </div>
 
@@ -90,16 +97,16 @@
                with font-awesome or any other icon font library -->
                         <li class="nav-item">
                             <a href="{{url('/home')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fa fa-tachometer" aria-hidden="true"></i> &nbsp;
                                 <p>
-                                    Home
+                                    Dashboard
                                     <!-- <i class="right fas fa-angle-left"></i> -->
                                 </p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{url('/anggota')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fa fa-id-card" aria-hidden="true"></i> &nbsp;
                                 <p>
                                     Anggota
                                     <!-- <i class="right fas fa-angle-left"></i> -->
@@ -108,7 +115,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="{{url('/layanan')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
+                                 <i class="fa fa-server" aria-hidden="true"></i> &nbsp;
                                 <p>
                                     Layanan
                                     <!-- <i class="right fas fa-angle-left"></i> -->
@@ -117,7 +124,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="{{url('/konsumen')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
+                                 <i class="fa fa-group" aria-hidden="true"></i> &nbsp;
                                 <p>
                                     Konsumen
                                     <!-- <i class="right fas fa-angle-left"></i> -->
@@ -126,14 +133,14 @@
                         </li>
                         <li class="nav-item">
                             <a href="{{url('/admpemesanan')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fa fa-cart-arrow-down" aria-hidden="true"></i> &nbsp;
                                 <p>
                                     Pemesanan
                                     <!-- <i class="right fas fa-angle-left"></i> -->
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item">
+                  <!--       <li class="nav-item">
                             <a href="{{url('/admtransaksi')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>
@@ -141,7 +148,7 @@
                                     <!-- <i class="right fas fa-angle-left"></i> -->
                                 </p>
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
