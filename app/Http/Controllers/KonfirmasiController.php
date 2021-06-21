@@ -64,7 +64,7 @@ class KonfirmasiController extends Controller
          }else{
 
             // KURANG INI
-             return redirect('/transaksi')->with('error', 'Ekstensi File Harus JPG');  
+             return redirect('/konfirmasi/'.$id_pemesanan.'')->with('warning', 'Ekstensi File Harus JPG');  
          }
               
          
