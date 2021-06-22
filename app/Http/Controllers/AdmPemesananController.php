@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pemesanan;
+use App\Models\Transaksi;
 use Illuminate\Http\Request;
 
 class AdmPemesananController extends Controller
@@ -30,9 +31,10 @@ class AdmPemesananController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function bukti($id)
     {
-        //
+        $data = Transaksi::where('id_transaksi',$id)->get();
+        return view('admin.pemesanan.bukti', compact('data'));
     }
 
     /**

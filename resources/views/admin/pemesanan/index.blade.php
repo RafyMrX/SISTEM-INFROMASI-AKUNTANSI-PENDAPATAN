@@ -60,8 +60,10 @@
                                 <td>{{$item->id_konsumen}}</td>
                                 <td>{{$item->waktu_pemesanan}}</td>
                                 <td>Belum Dibayar</td>
-                                <td><a href="{{url('/detail-pemesanan/'.$item->id_pemesanan.'')}}" class="btn btn-primary"><i class="fas fa-pencil-alt"></i>Detail</a>
-                                    <a href="" class="btn btn-primary"><i class="fas fa-eye"></i>Lihat Pembayaran</a>
+                                <td><a href="{{url('/detail-pemesanan/'.$item->id_pemesanan.'')}}" class="btn btn-primary"><i class="fa fa-pencil-alt"></i> Detail</a>
+                                    @if($item->status_pemesanan == 1)
+                                    <a href="{{url('/bukti/'.$item->Transaksi['id_transaksi'].'')}}" class="btn btn-primary"><i class="fa fa-eye"></i> Lihat Pembayaran</a>
+                                    @endif
                                 </td>
                             </tr>
                             @endforeach
