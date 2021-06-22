@@ -18,6 +18,12 @@ class AdmPemesananController extends Controller
         $pemesanan = Pemesanan::All();
         return view('admin.pemesanan.index', compact('pemesanan'));
     }
+    public function detail($id)
+    {
+        //DB Pemesanan
+        $detail = Pemesanan::where('id_pemesanan', $id)->get();
+        return view('admin.pemesanan.detail', compact('detail'));
+    }
 
     /**
      * Show the form for creating a new resource.

@@ -76,6 +76,7 @@ Route::get('/kdelete/{id}', [AdmKonsumenController::class, 'destroy']);
 
 // Pemesanan
 Route::get('/admpemesanan', [AdmPemesananController::class, 'index']);
+Route::get('/detail-pemesanan/{id}', [AdmPemesananController::class, 'detail']);
 
 //Transaksi
 Route::get('/admtransaksi', [AdmTransaksiController::class, 'index']);

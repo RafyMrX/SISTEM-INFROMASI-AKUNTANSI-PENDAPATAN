@@ -53,19 +53,19 @@
                             </tr>
                         </thead>
                         <tbody>
-                        @foreach($pemesanan as $item)
+                            @foreach($pemesanan as $item)
                             <tr>
-                              <td>{{$loop->iteration}}</td>
-                                    <td>{{$item->id_pemesanan}}</td>
-                                    <td>{{$item->id_konsumen}}</td>
-                                    <td>{{$item->waktu_pemesanan}}</td>
-                                    <td>Belum Dibayar</td>
-                                    <td><a href="" class="btn btn-primary"><i class="fas fa-pencil-alt"></i>Detail</a>
-                                        <a href="" class="btn btn-primary"><i class="fas fa-eye"></i>Lihat Pembayaran</a>
-                                    </td>
+                                <td>{{$loop->iteration}}</td>
+                                <td>{{$item->id_pemesanan}}</td>
+                                <td>{{$item->id_konsumen}}</td>
+                                <td>{{$item->waktu_pemesanan}}</td>
+                                <td>Belum Dibayar</td>
+                                <td><a href="{{url('/detail-pemesanan/'.$item->id_pemesanan.'')}}" class="btn btn-primary"><i class="fas fa-pencil-alt"></i>Detail</a>
+                                    <a href="" class="btn btn-primary"><i class="fas fa-eye"></i>Lihat Pembayaran</a>
+                                </td>
                             </tr>
-                    @endforeach
-                          
+                            @endforeach
+
                         </tbody>
                     </table>
                 </div>

@@ -54,7 +54,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu dropdown-menu-right">
                         <div class="dropdown"></div>
-                        <a href="#" class="dropdown-item">
+                        <a href="{{url('/logout')}}" class="dropdown-item text-danger">
                             <i class="fas fa-sign-out-alt"></i> Logout
                         </a>
                     </div>
@@ -134,7 +134,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('/admtransaksi')}}" class="nav-link">
+                            <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>
                                     Transaksi
