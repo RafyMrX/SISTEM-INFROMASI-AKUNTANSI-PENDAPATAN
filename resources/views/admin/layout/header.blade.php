@@ -46,7 +46,7 @@
             <!-- Left navbar links -->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fa fa-bars" aria-hidden="true"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="{{url('/home')}}" class="nav-link">Home</a>
@@ -57,7 +57,7 @@
                 <!-- Account Dropdown Menu -->
                 <li class="nav-item dropdown">
                     <a class="nav-link" data-toggle="dropdown" href="#">
-                        <div class="d-sm-none d-lg-inline-block"><i class="far fa-user"></i> Hi, Ujang Maman <i class="fas fa-angle-down"></i></div>
+                        <div class="d-sm-none d-lg-inline-block"><i class="far fa-user"></i> Hi, Ujang Maman <i class="fa fa-sort-desc" aria-hidden="true"></i></div>
                     </a>
                     <div class="dropdown-menu dropdown-menu dropdown-menu-right">
                         <div class="dropdown"></div>
@@ -140,15 +140,6 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>
-                                    Transaksi
-                                    <!-- <i class="right fas fa-angle-left"></i> -->
-                                </p>
-                            </a>
-                        </li> -->
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
