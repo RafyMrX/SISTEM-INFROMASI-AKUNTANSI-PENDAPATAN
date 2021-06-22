@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Pemesanan;
 use Illuminate\Http\Request;
 
 class AdmHomeController extends Controller
@@ -13,7 +13,22 @@ class AdmHomeController extends Controller
      */
     public function index()
     {
-        return view('admin.home.index');
+
+        $t_berhasil = Pemesanan::where('status_pemesanan',1)->count();
+        $t_pending = Pemesanan::where('status_pemesanan',0)->count();
+        $t_pendapatan = Pemesanan::where('status_pemesanan',1)->sum('total');
+
+        $last_order = Pemesanan::where('status_pemesanan',1)->latest()->limit(5)->get();    
+
+        $cart_pendapatan = Pemesanan::select('status_pemesanan',\DB::raw("SUM(IF(MONTHNAME(created_at) = MONTHNAME(created_at), total, 0)) AS hasil"))->groupBy(\DB::raw("Month(created_at), status_pemesanan"))->having('status_pemesanan',1)->pluck('hasil');
+
+
+         $tanggal = Pemesanan::distinct()->select(\DB::raw("MONTHNAME(created_at) as tgl"))->where('status_pemesanan',1)->pluck('tgl');    
+
+
+
+
+        return view('admin.home.index',compact('t_berhasil','t_pending','t_pendapatan', 'last_order', 'cart_pendapatan', 'tanggal'));
     }
 
     /**

@@ -62,8 +62,8 @@
                                 <td>{{$item->username}}</td>
                                 <td>{{$item->jabatan}}</td>
                                 <td>
-                                    <a href="{{url('/anggota/'.$item->id_anggota.'')}}" class="btn btn-primary"><i class="fas fa-pencil-alt"></i></a>
-                                    <a href="{{url('/adelete/'.$item->id_anggota.'')}}" class="btn btn-danger confirm"><i class="fas fa-trash-alt"></i></a>
+                                    <a href="{{url('/anggota/'.$item->id_anggota.'')}}" class="btn btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                    <a href="{{url('/adelete/'.$item->id_anggota.'')}}" class="btn btn-danger confirm"><i class="fa fa-trash" aria-hidden="true"></i></a>
                                     <!-- <form action="/layanan/{{$item->id_layanan}}" method="post" class="d-inline" id="delete{{$item->id_layanan}}"> -->
                                     <!-- @method('delete')
                                     @csrf -->
