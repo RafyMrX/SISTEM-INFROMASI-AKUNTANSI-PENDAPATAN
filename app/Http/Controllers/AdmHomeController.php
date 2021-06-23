@@ -25,10 +25,10 @@ class AdmHomeController extends Controller
 
          $tanggal = Pemesanan::distinct()->select(\DB::raw("MONTHNAME(created_at) as tgl"))->where('status_pemesanan',1)->pluck('tgl');    
 
+         $t_lababersih =  Pemesanan::select(\DB::raw('(total*0.1)+4000 as lababersih'))->where('status_pemesanan',1)->pluck('lababersih')->toArray();
+         $total = array_sum($t_lababersih);
 
-
-
-        return view('admin.home.index',compact('t_berhasil','t_pending','t_pendapatan', 'last_order', 'cart_pendapatan', 'tanggal'));
+        return view('admin.home.index',compact('t_berhasil','t_pending','t_pendapatan', 'last_order', 'cart_pendapatan', 'tanggal','total'));
     }
 
     /**

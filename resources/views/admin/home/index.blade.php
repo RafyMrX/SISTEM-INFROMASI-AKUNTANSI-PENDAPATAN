@@ -56,7 +56,7 @@
                     <!-- small box -->
                     <div class="small-box bg-success">
                         <div class="inner">
-                            <h3>Rp {{number_format($t_pendapatan)}}</h3>
+                            <h3>Rp {{number_format($t_pendapatan,0,',','.')}}</h3>
 
                             <p>Laporan Pendapatan</p>
                         </div>
@@ -68,7 +68,7 @@
                     <div class="small-box bg-warning">
                         <div class="inner">
                           <!--   <h3>Rp 12.000.000</h3> -->
-                          <h4>Masih Tahap Devlop</h4>
+                          <h3>Rp. {{number_format($total,0,',','.')}}</h3>
                             <p>Laba Bersih</p>
                         </div>
                         <a href="#" class="small-box-footer"><i class="fas fa-arrow-circle-none"></i></a>
