@@ -99,9 +99,7 @@ class AdmAnggotaController extends Controller
     public function update(Request $request, Anggota $anggota)
     {
         $request->validate([
-            'namalayanan' => 'required',
-            'deskripsi' => 'required',
-            'harga' => 'required',
+            'nama' => 'required'
         ]);
         if ($request->input('jabatan') == "Karyawan") {
             $jabatan = 0;
@@ -127,6 +125,6 @@ class AdmAnggotaController extends Controller
     public function destroy($id, Anggota $anggota)
     {
         Anggota::where('id_anggota', $id)->delete();
-        return redirect('/anggota')->with('success', '');
+        return redirect('/anggota')->with('success', 'Data Berhasil Dihapus');
     }
 }

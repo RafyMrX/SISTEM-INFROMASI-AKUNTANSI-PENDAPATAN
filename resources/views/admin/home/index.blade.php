@@ -2,8 +2,10 @@
 @section('judul', 'Home')
 @section('content')
 
+
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
+    @if(session()->get('SessionJabatan') == 1)
     <!-- Content Header (Page header) -->
     <div class="content-header">
         <div class="container-fluid">
@@ -13,7 +15,7 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{url('/home')}}">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{url('/dashboard')}}">Home</a></li>
                         <li class="breadcrumb-item active">Laporan Pendapatan</li>
                     </ol>
                 </div><!-- /.col -->
@@ -67,8 +69,8 @@
                     <!-- small box -->
                     <div class="small-box bg-warning">
                         <div class="inner">
-                          <!--   <h3>Rp 12.000.000</h3> -->
-                          <h3>Rp. {{number_format($total,0,',','.')}}</h3>
+                            <!--   <h3>Rp 12.000.000</h3> -->
+                            <h3>Rp. {{number_format($total,0,',','.')}}</h3>
                             <p>Laba Bersih</p>
                         </div>
                         <a href="#" class="small-box-footer"><i class="fas fa-arrow-circle-none"></i></a>
@@ -84,44 +86,41 @@
 
                     <!-- Custom tabs (Charts with tabs)-->
 
-            <div id="container" style="width:100%; height:400px;">
-     <script type="text/javascript">
-        var pendapatan =  <?php echo str_replace('"', '', json_encode($cart_pendapatan));?>;
-        var tgl = <?php echo json_encode($tanggal)?>;
-                        Highcharts.chart('container', {
-                            chart: {
-                                type: 'line'
-                            },
-                            title: {
-                                text: 'Grafik Pendapatan Bulanan'
-                            },
-                        
-                            xAxis: {
-                                categories: tgl
-                            },
-                            yAxis: {
+                    <div id="container" style="width:100%; height:400px;">
+                        <script type="text/javascript">
+                            var pendapatan = <?php echo str_replace('"', '', json_encode($cart_pendapatan)); ?>;
+                            var tgl = <?php echo json_encode($tanggal) ?>;
+                            Highcharts.chart('container', {
+                                chart: {
+                                    type: 'line'
+                                },
                                 title: {
-                                    text: 'Pendapatan'
-                                }
-                            },
-                            plotOptions: {
-                                line: {
-                                    dataLabels: {
-                                        enabled: true
-                                    },
-                                    enableMouseTracking: false
-                                }
-                            },
-                            series: [{
-                                name: 'Pendapatan',
-                                data: pendapatan
-                            }]
-                        });
+                                    text: 'Grafik Pendapatan Bulanan'
+                                },
 
-
-
-                    </script>
-</div>       
+                                xAxis: {
+                                    categories: tgl
+                                },
+                                yAxis: {
+                                    title: {
+                                        text: 'Pendapatan'
+                                    }
+                                },
+                                plotOptions: {
+                                    line: {
+                                        dataLabels: {
+                                            enabled: true
+                                        },
+                                        enableMouseTracking: false
+                                    }
+                                },
+                                series: [{
+                                    name: 'Pendapatan',
+                                    data: pendapatan
+                                }]
+                            });
+                        </script>
+                    </div>
                 </section>
                 <!-- /.Left col -->
                 <!-- right col (We are only adding the ID to make the widgets sortable)-->
@@ -149,30 +148,31 @@
                                         <a href="javascript:void(0)" class="product" style="margin-left: -59px;">
                                             {{$item->id_pemesanan}} &nbsp;
                                             {{$item->nama}}
-                                            <span class="badge badge-warning float-right">Rp.  {{number_format($item->total)}}</span></a>
-                                        </div>
-                                    </li>
-                                    @endforeach
-                                    <!-- /.item -->
-                                </ul>
-                            </div>
-                            <!-- /.card-body -->
-                            <div class="card-footer text-center">
-                                <a href="javascript:void(0)" class="uppercase"></a>
-                            </div>
-                            <!-- /.card-footer -->
+                                            <span class="badge badge-warning float-right">Rp. {{number_format($item->total)}}</span></a>
+                                    </div>
+                                </li>
+                                @endforeach
+                                <!-- /.item -->
+                            </ul>
                         </div>
-                        <!-- Map card -->
+                        <!-- /.card-body -->
+                        <div class="card-footer text-center">
+                            <a href="javascript:void(0)" class="uppercase"></a>
+                        </div>
+                        <!-- /.card-footer -->
+                    </div>
+                    <!-- Map card -->
 
-                    </section>
-                    <!-- right col -->
-                </div>
-                <!-- /.row (main row) -->
-            </div><!-- /.container-fluid -->
-        </section>
-        <!-- /.content -->
-    </div>
+                </section>
+                <!-- right col -->
+            </div>
+            <!-- /.row (main row) -->
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+    @endif
+</div>
 
 
 
-    @endsection
+@endsection

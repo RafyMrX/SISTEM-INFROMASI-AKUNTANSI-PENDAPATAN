@@ -40,7 +40,6 @@
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
-
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <!-- Left navbar links -->
@@ -49,7 +48,7 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fa fa-bars" aria-hidden="true"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="{{url('/home')}}" class="nav-link">Home</a>
+                    <a href="{{url('/dashboard')}}" class="nav-link">Home</a>
                 </li>
             </ul>
 
@@ -57,11 +56,11 @@
                 <!-- Account Dropdown Menu -->
                 <li class="nav-item dropdown">
                     <a class="nav-link" data-toggle="dropdown" href="#">
-                        <div class="d-sm-none d-lg-inline-block"><i class="far fa-user"></i> Hi, Ujang Maman <i class="fa fa-sort-desc" aria-hidden="true"></i></div>
+                        <div class="d-sm-none d-lg-inline-block"><i class="far fa-user"></i> Hallo, {{session()->get('SessionNamaAdmin')}} <i class="fa fa-sort-desc" aria-hidden="true"></i></div>
                     </a>
                     <div class="dropdown-menu dropdown-menu dropdown-menu-right">
                         <div class="dropdown"></div>
-                        <a href="{{url('/logout')}}" class="dropdown-item text-danger">
+                        <a href="{{url('/logoutadmin')}}" class="dropdown-item text-danger">
                             <i class="fas fa-sign-out-alt"></i> Logout
                         </a>
                     </div>
@@ -82,11 +81,8 @@
             <div class="sidebar">
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                    <div class="image">
-                        <img src="{{url('assets/admin/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
-                    </div>
                     <div class="info">
-                        <a href="#" class="d-block">Admin</a>
+                        <a href="#" class="d-block">Hallo, {{session()->get('SessionNamaAdmin')}}</a>
                     </div>
                 </div>
 
@@ -96,7 +92,7 @@
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="{{url('/home')}}" class="nav-link">
+                            <a href="{{url('/dashboard')}}" class="nav-link">
                                 <i class="fa fa-tachometer" aria-hidden="true"></i> &nbsp;
                                 <p>
                                     Dashboard

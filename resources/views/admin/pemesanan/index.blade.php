@@ -47,6 +47,7 @@
                                 <th>No</th>
                                 <th>ID Pemesanan</th>
                                 <th>ID Konsumen</th>
+                                <th>Nama Konsumen</th>
                                 <th>Waktu Pemesanan</th>
                                 <th>Status</th>
                                 <th>Edit</th>
@@ -58,11 +59,17 @@
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$item->id_pemesanan}}</td>
                                 <td>{{$item->id_konsumen}}</td>
+                                <td>{{$item->nama}}</td>
                                 <td>{{$item->waktu_pemesanan}}</td>
+                                @if($item->status_pemesanan == 1)
+                                <td>Sudah Dibayar</td>
+                                @else
                                 <td>Belum Dibayar</td>
-                                <td><a href="{{url('/detail-pemesanan/'.$item->id_pemesanan.'')}}" class="btn btn-primary"><i class="fa fa-pencil-alt"></i> Detail</a>
+                                @endif
+                                <td>
+                                    <a href="{{url('/detail-pemesanan/'.$item->id_pemesanan.'')}}" class="btn btn-primary"><i class="fa fa-pencil-alt"></i> Detail</a>
                                     @if($item->status_pemesanan == 1)
-                                    <a href="{{url('/bukti/'.$item->Transaksi['id_transaksi'].'')}}" class="btn btn-primary"><i class="fa fa-eye"></i> Lihat Pembayaran</a>
+                                    <a href="{{url('/bukti/'.$item->Transaksi['id_transaksi'].'')}}" class="btn btn-primary"><i class="fa fa-eye"></i> Bukti Pembayaran</a>
                                     @endif
                                 </td>
                             </tr>
