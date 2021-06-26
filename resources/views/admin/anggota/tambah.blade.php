@@ -49,7 +49,8 @@
                                     <label for="gender">Jabatan</label>
                                     <select name="jabatan" class="form-control" id="jabatan">
                                         <option value='Manager'>Manager</option>
-                                        <option value='Karyawan'>Karyawan</option>
+                                        <option value='Sales'>Sales</option>
+                                        <option value='RnD'>RnD</option>
                                     </select>
                                 </div>
                                 <div class="form-group">

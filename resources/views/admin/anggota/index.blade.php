@@ -26,6 +26,7 @@
     <section class="content">
         <div class="container-fluid">
             <!-- Small boxes (Stat box) -->
+            @if(session()->get('SessionJabatan') == 1)
             <div class="row">
                 <div class="col-md-9">
                     <a href="{{url('/anggota/tambah')}}" class="btn btn-success adds ml-auto"><i class="fa fa-plus"></i> Tambah Anggota </a>
@@ -33,6 +34,7 @@
                 <div class="col-md-3">
                 </div>
             </div>
+            @endif
             <br>
             <!-- ./col -->
             <div class="card">

@@ -50,7 +50,8 @@
                                     <label for="gender">Jabatan</label>
                                     <select name="jabatan" class="form-control" id="jabatan">
                                         <option {{ ($item->jabatan) == 'Manager' ? 'selected' : '' }} value='Manager'>Manager</option>
-                                        <option {{ ($item->jabatan) == 'Karyawan' ? 'selected' : '' }} value='Karyawan'>Karyawan</option>
+                                        <option {{ ($item->jabatan) == 'Sales' ? 'selected' : '' }} value='Sales'>Sales</option>
+                                        <option {{ ($item->jabatan) == 'RnD' ? 'selected' : '' }} value='RnD'>RnD</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
