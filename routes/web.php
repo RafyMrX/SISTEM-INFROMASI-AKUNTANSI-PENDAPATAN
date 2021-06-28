@@ -18,6 +18,7 @@ use App\Http\Controllers\KonfirmasiController;
 // ROUTE FRONT END
 Route::get('/', [PagesController::class, 'index']);
 
+
 // PEMESANAN
 Route::get('/pemesanan', [PemesananController::class, 'index']);
 Route::get('/nota-pemesanan', [PagesController::class, 'nota']);

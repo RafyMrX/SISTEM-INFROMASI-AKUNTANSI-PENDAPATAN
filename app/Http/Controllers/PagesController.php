@@ -23,5 +23,7 @@ class PagesController extends Controller
     {
         return view('public.akun.register');
     }
+
+
     
 }

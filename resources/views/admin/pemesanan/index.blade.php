@@ -48,6 +48,7 @@
                                 <th>ID Pemesanan</th>
                                 <th>ID Konsumen</th>
                                 <th>Waktu Pemesanan</th>
+                                <th>Nominal</th>
                                 <th>Status</th>
                                 <th>Edit</th>
                             </tr>
@@ -59,6 +60,7 @@
                                 <td>{{$item->id_pemesanan}}</td>
                                 <td>{{$item->id_konsumen}}</td>
                                 <td>{{$item->waktu_pemesanan}}</td>
+                                <td>{{number_format($item->total)}}</td>
                                 <td>Belum Dibayar</td>
                                 <td><a href="{{url('/detail-pemesanan/'.$item->id_pemesanan.'')}}" class="btn btn-primary"><i class="fa fa-pencil-alt"></i> Detail</a>
                                     @if($item->status_pemesanan == 1)

@@ -40,6 +40,25 @@ class PemesananController extends Controller
         $generate = new generateKode();
         $kode = $generate->KodePemesanan();
 
+            $nominal = $request->input('total');
+            $sub = substr($nominal,-3);
+            $sub2 = substr($nominal,-2);
+            $sub3 = substr($nominal,-1);
+ 
+            $total =  rand(0, 999);
+            $total2 =  rand(0, 99);
+            $total3 =  rand(0, 9);
+
+                if($sub==0){
+                    $hasil =  $nominal + $total; 
+
+                }if($sub2 == 0){
+                    $hasil = $nominal + $total2; 
+
+                }if($sub3 == 0){
+                    $hasil = $nominal + $total3; 
+
+                }
 
         $request->validate(
             [
@@ -60,7 +79,7 @@ class PemesananController extends Controller
                 'waktu_pemesanan' => $request->input('jam'),
                 'waktu_kunjungan' => $request->input('tgl'),
                 'status_pemesanan' => '0',
-                'total' => $request->input('total'),
+                'total' => $hasil,
             ]
 
         );
