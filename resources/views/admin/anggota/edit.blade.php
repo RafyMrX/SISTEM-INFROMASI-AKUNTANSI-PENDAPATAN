@@ -51,7 +51,7 @@
                                     <select name="jabatan" class="form-control" id="jabatan">
                                         <option {{ ($item->jabatan) == 'Manager' ? 'selected' : '' }} value='Manager'>Manager</option>
                                         <option {{ ($item->jabatan) == 'Sales' ? 'selected' : '' }} value='Sales'>Sales</option>
-                                        <option {{ ($item->jabatan) == 'RnD' ? 'selected' : '' }} value='RnD'>RnD</option>
+                                        <option {{ ($item->jabatan) == 'Human Resource' ? 'selected' : '' }} value='Human Resource'>Human Resource</option>
                                     </select>
                                 </div>
                                 <div class="form-group">

@@ -50,7 +50,7 @@ class AdmAnggotaController extends Controller
             'password' => 'required|min:8',
             'nama' => 'required',
         ]);
-        if ($request->input('jabatan') == "RnD") {
+        if ($request->input('jabatan') == "Human Resource") {
             $jabatan = 0;
         } elseif ($request->input('jabatan') == "Manager") {
             $jabatan = 1;
@@ -103,7 +103,7 @@ class AdmAnggotaController extends Controller
         $request->validate([
             'nama' => 'required'
         ]);
-        if ($request->input('jabatan') == "RnD") {
+        if ($request->input('jabatan') == "Human Resource") {
             $jabatan = 0;
         } elseif ($request->input('jabatan') == "Manager") {
             $jabatan = 1;

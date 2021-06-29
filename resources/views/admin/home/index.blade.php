@@ -5,6 +5,12 @@
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
+    @if(session()->get('SessionJabatan') == 2)
+    <H1>Selamat Datang Bagian Sales</H1>
+    @endif
+    @if(session()->get('SessionJabatan') == 0)
+    <H1>Selamat Datang Bagian Human Resource</H1>
+    @endif
     @if(session()->get('SessionJabatan') == 1)
     <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -54,15 +60,15 @@
                 </div>
                 <div class="col-lg-3 col-3">
                     <!-- small box -->
-                     <div class="small-box bg-warning">
+                    <div class="small-box bg-warning">
                         <div class="inner">
                             <h3>{{$t_confirm}}</h3>
 
-                            <p>Total Transaksi Menunggu Konfirmasi</p>
+                            <p style="font-size: 11.3pt;">Total Transaksi Menunggu Konfirmasi</p>
                         </div>
                         <a href="#" class="small-box-footer"><i class="fas fa-arrow-circle-none"></i></a>
                     </div>
-                        <div class="small-box bg-danger">
+                    <div class="small-box bg-danger">
                         <div class="inner">
                             <h3>{{$t_tolak}}</h3>
 
@@ -71,11 +77,11 @@
                         <a href="#" class="small-box-footer"><i class="fas fa-arrow-circle-none"></i></a>
                     </div>
 
-                
+
                 </div>
                 <div class="col-lg-3 col-3">
                     <!-- small box -->
-                          <div class="small-box bg-success">
+                    <div class="small-box bg-success">
                         <div class="inner">
                             <h3>Rp {{number_format($t_pendapatan,0,',','.')}}</h3>
 
@@ -92,7 +98,7 @@
                         <a href="#" class="small-box-footer"><i class="fas fa-arrow-circle-none"></i></a>
                     </div>
                 </div>
-               
+
                 <!-- ./col -->
             </div>
             <!-- /.row -->

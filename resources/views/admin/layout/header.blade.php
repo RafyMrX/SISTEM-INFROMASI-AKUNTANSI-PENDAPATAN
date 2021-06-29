@@ -91,6 +91,7 @@
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+                        @if(session()->get('SessionJabatan') != 2 && session()->get('SessionJabatan') != 0)
                         <li class="nav-item">
                             <a href="{{url('/dashboard')}}" class="nav-link">
                                 <i class="fa fa-tachometer" aria-hidden="true"></i> &nbsp;
@@ -100,6 +101,8 @@
                                 </p>
                             </a>
                         </li>
+                        @endif
+                        @if(session()->get('SessionJabatan') != 2)
                         <li class="nav-item">
                             <a href="{{url('/anggota')}}" class="nav-link">
                                 <i class="fa fa-id-card" aria-hidden="true"></i> &nbsp;
@@ -109,6 +112,8 @@
                                 </p>
                             </a>
                         </li>
+                        @endif
+                        @if(session()->get('SessionJabatan') != 0)
                         <li class="nav-item">
                             <a href="{{url('/layanan')}}" class="nav-link">
                                 <i class="fa fa-server" aria-hidden="true"></i> &nbsp;
@@ -118,6 +123,8 @@
                                 </p>
                             </a>
                         </li>
+                        @endif
+                        @if(session()->get('SessionJabatan') != 2)
                         <li class="nav-item">
                             <a href="{{url('/konsumen')}}" class="nav-link">
                                 <i class="fa fa-group" aria-hidden="true"></i> &nbsp;
@@ -127,6 +134,8 @@
                                 </p>
                             </a>
                         </li>
+                        @endif
+                        @if(session()->get('SessionJabatan') != 0)
                         <li class="nav-item">
                             <a href="{{url('/admpemesanan')}}" class="nav-link">
                                 <i class="fa fa-cart-arrow-down" aria-hidden="true"></i> &nbsp;
@@ -136,6 +145,7 @@
                                 </p>
                             </a>
                         </li>
+                        @endif
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->

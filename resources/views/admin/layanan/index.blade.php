@@ -25,7 +25,7 @@
     <section class="content">
         <div class="container-fluid">
             <!-- Small boxes (Stat box) -->
-            @if(session()->get('SessionJabatan') == 1)
+            @if(session()->get('SessionJabatan') != 0)
             <div class="row">
                 <div class="col-md-9">
                     <a href="{{url('/layanan/tambah')}}" class="btn btn-success adds ml-auto"><i class="fa fa-plus"></i> Tambah Layanan </a>
@@ -51,7 +51,7 @@
                                 <th>Deskrispi Layanan</th>
                                 <th>Foto</th>
                                 <th>Harga Layanan</th>
-                                @if(session()->get('SessionJabatan') == 1)
+                                @if(session()->get('SessionJabatan') != 0)
                                 <th>Edit</th>
                                 @endif
                             </tr>
@@ -66,7 +66,7 @@
                                 <td>{{$item->deskripsi_layanan}}</td>
                                 <td><img src="{{ asset('storage/'.$item->foto_layanan.'')}}" width="130"></td>
                                 <td>Rp. {{$item->harga_layanan}}</td>
-                                @if(session()->get('SessionJabatan') == 1)
+                                @if(session()->get('SessionJabatan') != 0)
                                 <td>
                                     <a href="{{url('/layanan/'.$item->id_layanan.'')}}" class="btn btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                     <a href="{{url('/delete/'.$item->id_layanan.'')}}" class="btn btn-danger confirm"><i class="fa fa-trash" aria-hidden="true"></i></a>

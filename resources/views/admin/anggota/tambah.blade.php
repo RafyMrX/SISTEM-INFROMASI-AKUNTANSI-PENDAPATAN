@@ -50,7 +50,7 @@
                                     <select name="jabatan" class="form-control" id="jabatan">
                                         <option value='Manager'>Manager</option>
                                         <option value='Sales'>Sales</option>
-                                        <option value='RnD'>RnD</option>
+                                        <option value='Human Resource'>Human Resource</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
