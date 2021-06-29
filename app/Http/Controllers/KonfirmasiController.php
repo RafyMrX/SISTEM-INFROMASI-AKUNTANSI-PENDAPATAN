@@ -56,7 +56,7 @@ class KonfirmasiController extends Controller
 
             $pemesanan = Pemesanan::where("id_pemesanan", $id_pemesanan)->update(
             [
-                'status_pemesanan' => 1,
+                'status_pemesanan' => 2,
             ]
 
             );

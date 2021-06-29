@@ -41,12 +41,13 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                    <table id="example1" class="table table-bordered table-striped">
+                    <table id="example1" class="table table-bordered table-striped display nowrap">
                         <thead>
                             <tr>
                                 <th>No</th>
                                 <th>ID Pemesanan</th>
                                 <th>ID Konsumen</th>
+                                <th>Nama Konsumen</th>
                                 <th>Waktu Pemesanan</th>
                                 <th>Nominal</th>
                                 <th>Status</th>
@@ -59,12 +60,26 @@
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$item->id_pemesanan}}</td>
                                 <td>{{$item->id_konsumen}}</td>
+                                <td>{{$item->nama}}</td>
                                 <td>{{$item->waktu_pemesanan}}</td>
-                                <td>{{number_format($item->total)}}</td>
+                                <td>{{number_format($item->nominal)}}</td>
+                                @if($item->status_pemesanan == 1)
+                                <td>Sudah Dibayar</td>
+                                @elseif($item->status_pemesanan == 0)
                                 <td>Belum Dibayar</td>
-                                <td><a href="{{url('/detail-pemesanan/'.$item->id_pemesanan.'')}}" class="btn btn-primary"><i class="fa fa-pencil-alt"></i> Detail</a>
-                                    @if($item->status_pemesanan == 1)
-                                    <a href="{{url('/bukti/'.$item->Transaksi['id_transaksi'].'')}}" class="btn btn-primary"><i class="fa fa-eye"></i> Lihat Pembayaran</a>
+                                 @elseif($item->status_pemesanan == 2)
+                                 <td>Menunggu Konfirmasi</td>
+                                 @elseif($item->status_pemesanan == 3)
+                                 <td>DiTolak</td>
+                                @endif
+                                <td>
+                                    <a href="{{url('/detail-pemesanan/'.$item->id_pemesanan.'')}}" class="btn btn-primary"><i class="fa fa-pencil-alt"></i> Detail</a>
+                                    @if($item->status_pemesanan == 1 || $item->status_pemesanan == 3)
+                                    <a href="{{url('/bukti/'.$item->Transaksi['id_transaksi'].'')}}" class="btn btn-primary"><i class="fa fa-eye"></i> Bukti Pembayaran</a>
+                                    @elseif($item->status_pemesanan == 2)
+                                      <a href="{{url('/confirm/'.$item->id_pemesanan.'')}}" class="btn btn-warning">Konfirmasi Pembayaran</a>
+                                      <a href="{{url('/tolak/'.$item->id_pemesanan.'')}}" class="btn btn-danger">Tolak Pembayaran</a>
+                                       <a href="{{url('/bukti/'.$item->Transaksi['id_transaksi'].'')}}" class="btn btn-primary"><i class="fa fa-eye"></i> Bukti Pembayaran</a>
                                     @endif
                                 </td>
                             </tr>

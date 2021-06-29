@@ -104,7 +104,7 @@
 
 				<div class="col-md-4">
 					<div class="kotak">
-						<p class="text-center">Silahkan Lakukan Pembayaran <b>Rp.{{number_format($item->total)}}</b></p>
+						<p class="text-center">Silahkan Lakukan Pembayaran <b>Rp.{{number_format($item->nominal)}}</b></p>
 
 						<p class="text-center">ke Bank BNI <b>102-13646464-12</b></p>
 

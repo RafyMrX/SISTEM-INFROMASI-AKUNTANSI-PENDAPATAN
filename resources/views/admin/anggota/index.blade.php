@@ -26,6 +26,7 @@
     <section class="content">
         <div class="container-fluid">
             <!-- Small boxes (Stat box) -->
+            @if(session()->get('SessionJabatan') == 1)
             <div class="row">
                 <div class="col-md-9">
                     <a href="{{url('/anggota/tambah')}}" class="btn btn-success adds ml-auto"><i class="fa fa-plus"></i> Tambah Anggota </a>
@@ -33,6 +34,7 @@
                 <div class="col-md-3">
                 </div>
             </div>
+            @endif
             <br>
             <!-- ./col -->
             <div class="card">
@@ -49,7 +51,9 @@
                                 <th>Nama Anggota</th>
                                 <th>Username</th>
                                 <th>Jabatan</th>
+                                @if(session()->get('SessionJabatan') == 1)
                                 <th>Edit</th>
+                                @endif
                             </tr>
                         </thead>
                         @if($count > 0)
@@ -61,6 +65,7 @@
                                 <td>{{$item->nama_anggota}}</td>
                                 <td>{{$item->username}}</td>
                                 <td>{{$item->jabatan}}</td>
+                                @if(session()->get('SessionJabatan') == 1)
                                 <td>
                                     <a href="{{url('/anggota/'.$item->id_anggota.'')}}" class="btn btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                     <a href="{{url('/adelete/'.$item->id_anggota.'')}}" class="btn btn-danger confirm"><i class="fa fa-trash" aria-hidden="true"></i></a>
@@ -69,6 +74,7 @@
                                     @csrf -->
                                     <!-- </form> -->
                                 </td>
+                                @endif
                             </tr>
                             @endforeach
                         </tbody>

@@ -25,8 +25,12 @@
       <td>{{$item->layanan['nama_layanan']}}</td>
       @if($item->status_pemesanan == '0')
       <td style="color: red;font-weight: bold;">Belum Dibayar</td>
-      @else
+      @elseif($item->status_pemesanan == '1')
       <td style="color: green;font-weight: bold;">Sudah Dibayar</td>
+      @elseif($item->status_pemesanan == '2')
+       <td style="color: orange;font-weight: bold;">Menunggu Konfirmasi</td>
+       @elseif($item->status_pemesanan == '3')
+       <td style="color: red;font-weight: bold;">Pesanan Ditolak (bukti pembayaran tidak valid)</td>
       @endif
       <td>Rp.{{number_format($item->total)}}</td>
       <td><a href="{{url('/nota-pemesanan/'.$item->id_pemesanan.'')}}" class="btn btn-secondary">Detail</a> &nbsp; 

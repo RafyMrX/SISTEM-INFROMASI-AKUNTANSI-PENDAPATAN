@@ -57,6 +57,7 @@
     $(function() {
         $("#example1").DataTable({
             "responsive": true,
+             "scrollX": true,
             "autoWidth": false,
         });
         $('#example2').DataTable({

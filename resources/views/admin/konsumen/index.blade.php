@@ -28,7 +28,7 @@
                                 <th>Alamat Konsumen</th>
                                 <th>Telpon Konsumen</th>
                                 <th>Email Konsumen</th>
-                                <th>Edit</th>
+                                <!-- <th>Edit</th> -->
                             </tr>
                         </thead>
                         <tbody>
@@ -39,9 +39,6 @@
                                 <td>{{$item->address}}</td>
                                 <td>{{$item->phone}}</td>
                                 <td>{{$item->email}}</td>
-                                <td>
-                                    <a href="{{url('/kdelete/'.$item->id.'')}}" class="btn btn-danger confirm"><i class="fa fa-trash" aria-hidden="true"></i></a>
-                                </td>
                             </tr>
                             @endforeach
                     </table>

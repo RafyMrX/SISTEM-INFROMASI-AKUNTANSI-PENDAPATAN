@@ -134,7 +134,7 @@ class AdmLayananController extends Controller
                     'id_layanan' => $request->input('kode'),
                     'nama_layanan' => $request->input('namalayanan'),
                     'deskripsi_layanan' => $request->input('deskripsi'),
-                    'gambar' => $data->gambar,
+                    'foto_layanan' => $data->foto_layanan,
                     'harga_layanan' => $request->input('harga'),
                 ]);
         }

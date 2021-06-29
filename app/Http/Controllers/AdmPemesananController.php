@@ -37,6 +37,28 @@ class AdmPemesananController extends Controller
         return view('admin.pemesanan.bukti', compact('data'));
     }
 
+      public function confirm($id)
+    {
+         $pemesanan = Pemesanan::where("id_pemesanan", $id)->update(
+            [
+                'status_pemesanan' => 1,
+            ]
+            );
+
+          return redirect('/admpemesanan')->with('success', 'Berhasil Konfirmasi');  
+    }
+
+          public function tolak($id)
+    {
+         $pemesanan = Pemesanan::where("id_pemesanan", $id)->update(
+            [
+                'status_pemesanan' => 3,
+            ]
+            );
+
+          return redirect('/admpemesanan')->with('success', 'Pesanan Ditolak');  
+    }
+
     /**
      * Store a newly created resource in storage.
      *

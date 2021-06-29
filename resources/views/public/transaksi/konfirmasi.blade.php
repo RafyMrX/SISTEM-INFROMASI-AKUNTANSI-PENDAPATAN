@@ -3,11 +3,11 @@
 @section('content')
 <div class="container">
 <h3 class="mt-3 mb-4">Konfirmasi Pembayaran</h3>
-<p>Kirim bukti pembayaran anda disini</p>
+<p>Total yang harus anda bayar</p>
 
 
 	@foreach($pemesanan as $item)
-	<h5  style="border: 1px solid #000; padding: 10px; width: 290px; font-weight: bold;">Total Tagihan Anda Rp.{{number_format($item->total)}}</h5>
+	<h5  style="border: 1px solid #000; padding: 10px; width: 290px; font-weight: bold;">Total Tagihan Anda Rp.{{number_format($item->nominal)}}</h5>
 	<br>
 	<div class="row">
 			<div class="col-md-6">

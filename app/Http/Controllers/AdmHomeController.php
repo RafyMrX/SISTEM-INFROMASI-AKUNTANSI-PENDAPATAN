@@ -16,6 +16,8 @@ class AdmHomeController extends Controller
 
         $t_berhasil = Pemesanan::where('status_pemesanan',1)->count();
         $t_pending = Pemesanan::where('status_pemesanan',0)->count();
+         $t_confirm = Pemesanan::where('status_pemesanan',2)->count();
+         $t_tolak = Pemesanan::where('status_pemesanan',3)->count();
         $t_pendapatan = Pemesanan::where('status_pemesanan',1)->sum('total');
 
         $last_order = Pemesanan::where('status_pemesanan',1)->latest()->limit(5)->get();    
@@ -28,7 +30,7 @@ class AdmHomeController extends Controller
          $t_lababersih =  Pemesanan::select(\DB::raw('(total*0.1)+4000 as lababersih'))->where('status_pemesanan',1)->pluck('lababersih')->toArray();
          $total = array_sum($t_lababersih);
 
-        return view('admin.home.index',compact('t_berhasil','t_pending','t_pendapatan', 'last_order', 'cart_pendapatan', 'tanggal','total'));
+        return view('admin.home.index',compact('t_berhasil','t_pending','t_pendapatan', 'last_order', 'cart_pendapatan', 'tanggal','total','t_confirm','t_tolak'));
     }
 
     /**

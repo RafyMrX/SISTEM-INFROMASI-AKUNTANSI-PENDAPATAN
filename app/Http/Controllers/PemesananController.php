@@ -15,6 +15,7 @@ class PemesananController extends Controller
      */
     public function index($id)
     {
+
         $layanan = Layanan::where('id_layanan', $id)->get(); 
         return view('public.pemesanan.index', compact('layanan'));
     }
@@ -45,9 +46,9 @@ class PemesananController extends Controller
             $sub2 = substr($nominal,-2);
             $sub3 = substr($nominal,-1);
  
-            $total =  rand(0, 999);
-            $total2 =  rand(0, 99);
-            $total3 =  rand(0, 9);
+            $total =  rand(1, 999);
+            $total2 =  rand(1, 99);
+            $total3 =  rand(1, 9);
 
                 if($sub==0){
                     $hasil =  $nominal + $total; 
@@ -79,7 +80,8 @@ class PemesananController extends Controller
                 'waktu_pemesanan' => $request->input('jam'),
                 'waktu_kunjungan' => $request->input('tgl'),
                 'status_pemesanan' => '0',
-                'total' => $hasil,
+                'total' => $request->input('total'),
+                'nominal' => $hasil,
             ]
 
         );

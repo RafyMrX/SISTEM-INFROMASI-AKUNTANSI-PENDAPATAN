@@ -50,10 +50,12 @@ class AdmAnggotaController extends Controller
             'password' => 'required|min:8',
             'nama' => 'required',
         ]);
-        if ($request->input('jabatan') == "Karyawan") {
+        if ($request->input('jabatan') == "RnD") {
             $jabatan = 0;
         } elseif ($request->input('jabatan') == "Manager") {
             $jabatan = 1;
+        } elseif ($request->input('jabatan') == "Sales") {
+            $jabatan = 2;
         };
         Anggota::create([
             'id_anggota' => $request->input('kode'),
@@ -99,14 +101,14 @@ class AdmAnggotaController extends Controller
     public function update(Request $request, Anggota $anggota)
     {
         $request->validate([
-            'namalayanan' => 'required',
-            'deskripsi' => 'required',
-            'harga' => 'required',
+            'nama' => 'required'
         ]);
-        if ($request->input('jabatan') == "Karyawan") {
+        if ($request->input('jabatan') == "RnD") {
             $jabatan = 0;
         } elseif ($request->input('jabatan') == "Manager") {
             $jabatan = 1;
+        } elseif ($request->input('jabatan') == "Sales") {
+            $jabatan = 2;
         };
         Anggota::where('id_anggota', $request->input('kode'))->update([
             'username' => $request->input('username'),
@@ -127,6 +129,6 @@ class AdmAnggotaController extends Controller
     public function destroy($id, Anggota $anggota)
     {
         Anggota::where('id_anggota', $id)->delete();
-        return redirect('/anggota')->with('success', '');
+        return redirect('/anggota')->with('success', 'Data Berhasil Dihapus');
     }
 }
